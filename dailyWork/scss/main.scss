@@ -1,0 +1,59 @@
+$width : 90px;
+@mixin large-text($add ) {
+    font : {
+        size: 30px;
+        weight: bold;
+    }
+    color: $add;
+    @content;
+}
+@mixin position( 
+    $p : absolute,$t : null, $b : null, $l : null, $r : null){
+    position: $p;
+    top: $t;
+    bottom: $b;
+    left: $l;
+    right: $r;
+}
+@mixin awesome($word){
+    @if $word == "odd"{
+        color: blue;
+    } @else {
+        color: red;
+    }
+}
+.box{
+    background: darkgray;
+    @if not ($width > 100px){
+        height: 300px;
+    }
+    @include large-text(red){
+        text-align: center
+    };
+    position: relative;
+    .pos{
+        @include position( absolute , 50%, 0 , 50%, 0 );
+        @include position( $t : 50% , $l : 50% )
+    }
+}
+button{
+    &:nth-of-type(odd){
+        @include awesome("odd")
+    }
+}
+.btn{
+    padding: 10px;
+    background-color: burlywood;
+}
+.btn-danger{
+    /*
+        .btn, .btn-danger 로 구분하는 다중 선택자(Multiple Selector)가 만들어졌습니다.
+        **문제고려**
+        내 현재 선택자(위 예제의 .btn-danger)가 어디에 첨부될 것인가?
+        원치 않는 부작용이 초래될 수도 있는가?
+        이 한 번의 확장으로 얼마나 큰 CSS가 생성되는가?
+        사용 권장하지 않음
+    */
+    @extend .btn;
+    background-color: red;
+}
