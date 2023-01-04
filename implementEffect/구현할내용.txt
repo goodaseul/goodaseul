@@ -1,7 +1,7 @@
 **appsray - 어니컴
 
  - 스크롤매직 > function (221218 체크)
- -  tab
+ - tab
 
 **everygood - 트루델
 
@@ -47,26 +47,32 @@
  - 모바일 > 메인 탭 부분 css (.tab의 width를 자바스크립트로 해야할듯)
 
 **피코크
+
  - 브랜드소개 background fixed
  - 모바일 > 제품 탭 부분 css(.tab의 width 따로 구현안하고 다른방식으로 함 )
  - 모바일 > 햄버거 버튼 애니메이션 ~
 
 **한솔
+
  - 마키 메인 위에 돌아가는 애니메이션 메인에 width 늘어나는
 
 **폴수학
+
  - hover시 마키
  - 스크롤링이 다 되면 다음 active로 가기
 
 **김종학
+
  - data-link로 효과 주기 //swiper 로 구현가능한지 transform rotate 로 사선도 가능한지
  - works 부분 다시 한번 보기
 
 **옥시스
+
  - main호버시 자동스크롤링 bg 바뀜
  - 회사소개 svg 부분 확인하기
 
 /*공통부분*/
+
 header active / 페이지 진입 시 active
 
 및 푸르지오
