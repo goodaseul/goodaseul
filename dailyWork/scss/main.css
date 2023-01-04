@@ -1,0 +1,78 @@
+@charset "UTF-8";
+button:nth-child(1) {
+  width: 20px;
+}
+
+button:nth-child(2) {
+  width: 40px;
+}
+
+button:nth-child(3) {
+  width: 60px;
+}
+
+button:nth-child(1) {
+  width: 20px;
+}
+
+button:nth-child(2) {
+  width: 40px;
+}
+
+:nth-child(1)::before {
+  background: url("/static/images/main/why_bg.jpg");
+}
+
+:nth-child(2)::before {
+  background: url("/static/images/main/why_bg_02.jpg");
+}
+
+:nth-child(3)::before {
+  background: url("/static/images/main/why_bg_03.jpg");
+}
+
+:nth-child(4)::before {
+  background: url("/static/images/main/why_bg_04.jpg");
+}
+
+.box {
+  background: darkgray;
+  height: 300px;
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+  position: relative;
+}
+
+.box .pos {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+button:nth-of-type(odd) {
+  color: blue;
+}
+
+.btn, .btn-danger {
+  padding: 10px;
+  background-color: burlywood;
+}
+
+.btn-danger {
+  /*
+        .btn, .btn-danger 로 구분하는 다중 선택자(Multiple Selector)가 만들어졌습니다.
+        **문제고려**
+        내 현재 선택자(위 예제의 .btn-danger)가 어디에 첨부될 것인가?
+        원치 않는 부작용이 초래될 수도 있는가?
+        이 한 번의 확장으로 얼마나 큰 CSS가 생성되는가?
+        사용 권장하지 않음
+    */
+  background-color: red;
+}

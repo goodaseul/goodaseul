@@ -5,8 +5,7 @@ $red: #ca9964;
 $beige: #d6ccad;
 $orange: #e06014;
 $blue: #5aaed6;
-$colors: darken(#ca9964, 15%), #ca9964, darken(#ddd, 25%), $black;
-$i: 4;
+
 @mixin box-sizing($props) {
     -webkit-box-sizing: $props;
     -moz-box-sizing: $props;
@@ -45,22 +44,23 @@ $i: 4;
     box-shadow: $prop;
 }
 
-// @while $i > 0 {
-//     .accordion-group li:nth-child(#{$i}) {
-//         &.accordion-overlay {
-//             background-color: linear-gradient($colors, $i);
-//             opacity: 0.8;
-//         }
+$colors: (darken(#ca9964, 15%), #ca9964, darken(#ddd, 25%), $black);
 
-//         &.out {
-//             .accordion-overlay {
-//                 background-color: extract($colors, $i);
-//                 opacity: 0;
-//             }
-//         }
-//     }
-//     $i: $i - 1;
-// }
+@each $color in $colors {
+    $i: index($colors, $color);
+    .accordion-group li:nth-child(#{$i}) {
+        .accordion-overlay {
+            background: #{$color};
+            opacity: 0.8;
+        }
+        &.out {
+            .accordion-overlay {
+                background: #{$color};
+                opacity: 0;
+            }
+        }
+    }
+}
 
 *,
 *:before,
