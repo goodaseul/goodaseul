@@ -8,10 +8,10 @@ $(function () {
 
         $("header .header_full .depth1").each(function (j, v2) {
             if ($(_this).index() == $(this).index()) {
-                $(_this).toggleClass("on");
+                $(_this).toggleClass("active");
                 $(_this).find(".depth2_list").stop().slideToggle();
             } else {
-                $(v2).removeClass("on");
+                $(v2).removeClass("active");
                 $(v2).find(".depth2_list").stop().slideUp();
             }
         });

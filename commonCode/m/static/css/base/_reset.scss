@@ -9,9 +9,9 @@ Last Updated: 2022/02
     @return ($target/$vw-context) * 1vw;
 }
 //공통부분
-$inner: 1200px;
-$inner-space: 40px;
-$min-width: $inner + $inner-space;
+// $inner: 1200px;
+$inner-space: vw(40px);
+// $min-width: $inner + $inner-space;
 $url-images: "/m/static/images";
 $point: red;
 @mixin main-title {
@@ -250,6 +250,6 @@ em {
 }
 
 .inner {
-    width: $inner;
+    // width: $inner;
     padding: 0 $inner-space;
 }
