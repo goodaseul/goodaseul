@@ -13,7 +13,7 @@
         justify-content: space-between;
         height: 100%;
         .logo {
-            width: vw(295px);
+            width: vw(305px);
         }
         .btn_menu {
             width: vw(96px);
@@ -53,25 +53,19 @@
         $area: vw(220px);
         height: calc(100% - #{$area});
         overflow-y: scroll !important;
-        .inner {
-            padding: 0 vw(125px);
-        }
+        // padding-bottom: vw(60px);
+        z-index: 10;
         .depth1_list {
             color: #fff;
-            padding-top: vw(115px);
-            // padding-bottom: vw(365px);
+            padding-top: vw(120px);
+            padding-bottom: vw(365px);
             .depth1 {
-                margin-bottom: vw(60px);
-                &.active {
+                margin-bottom: vw(25px);
+                &:first-of-type,
+                &:last-of-type {
                     > a {
                         &::after {
-                            content: "";
-                            width: vw(230px);
-                            height: 2px;
-                            background-color: $point;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
+                            display: none;
                         }
                     }
                 }
@@ -81,94 +75,71 @@
                 > a {
                     font-size: vw(64px);
                     line-height: vw(180px);
-                    font-weight: 500;
+                    font-weight: bold;
                     color: #fff;
+                    // border-bottom: 1px solid #eeeeee;
                     position: relative;
-                    &::before {
+                    &::after {
                         content: "";
                         position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 80%;
-                        height: 1px;
-                        background-color: #333;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: url(/m/static/images/common/icon_header_arrow_gray.png) no-repeat center center/contain;
+                        width: vw(48px);
+                        height: vw(24px);
                     }
                 }
                 .depth2_list {
-                    padding: vw(40px) vw(20px) 0;
+                    padding: vw(25px) 0;
+                    border-bottom: 1px solid #333333;
+                    display: none;
+                    overflow: hidden;
                     .depth2 {
                         width: 100%;
                         display: flex;
                         flex-wrap: wrap;
                         align-items: center;
                         li {
-                            width: 100%;
-                            &.active {
-                                a {
-                                    color: $point;
-                                    font-weight: 500;
-                                }
-                            }
+                            width: 50%;
                             a {
-                                font-size: vw(48px);
-                                line-height: vw(124px);
-                                color: #666;
-                                &.active {
-                                    font-weight: 500;
-                                }
+                                font-size: vw(56px);
+                                line-height: vw(105px);
+                                color: #999999;
+                                font-weight: 300;
                             }
+                        }
+                    }
+                }
+                &.on {
+                    > a {
+                        color: $point;
+                        &::after {
+                            transform: translateY(-50%) rotate(180deg);
                         }
                     }
                 }
             }
         }
-        .wrap_etc {
+        .store {
             position: absolute;
-            padding-left: vw(85px);
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            .wrap_lang {
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: vw(60px);
+            $area: vw(140px);
+            width: calc(100% - #{$area});
+            height: vw(150px);
+            background: $point;
+            border-radius: vw(80px);
+            a {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                li {
-                    a {
-                        color: #666;
-                        padding: 0 vw(40px);
-                    }
-                    &:nth-of-type(2) {
-                        a {
-                            position: relative;
-                            &::before,
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                background-color: #333;
-                                width: 1px;
-                                height: 100%;
-                                top: 50%;
-                                transform: translateY(-50%);
-                            }
-                            &::before {
-                                left: 0;
-                            }
-                            &::after {
-                                right: 0;
-                            }
-                        }
-                    }
-                    &.active {
-                        a {
-                            color: #fff;
-                        }
-                    }
-                }
-            }
-            .contact {
-                width: vw(465px);
+                justify-content: center;
+                height: 100%;
+                color: #fff;
+                font-weight: 600;
+                font-size: vw(56px);
             }
         }
     }

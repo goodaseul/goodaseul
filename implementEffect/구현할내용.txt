@@ -1,11 +1,11 @@
 **appsray - 어니컴
 
  - 스크롤매직 > function (221218 체크)
- - tab
+ - tab (221220 체크)
 
 **everygood - 트루델
 
- - product hover 시 왼쪽에 똑같은 사진 보이기
+ - product hover 시 왼쪽에 똑같은 사진 보이기 
 
 
 **이스트힐 
