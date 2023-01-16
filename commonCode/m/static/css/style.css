@@ -433,7 +433,7 @@ em {
 }
 
 .header > .inner .logo {
-  width: 23.04688vw;
+  width: 23.82812vw;
 }
 
 .header > .inner .btn_menu {
@@ -477,29 +477,21 @@ em {
   width: 100%;
   height: calc(100% - 17.1875vw);
   overflow-y: scroll !important;
-}
-
-.header .header_full .inner {
-  padding: 0 9.76562vw;
+  z-index: 10;
 }
 
 .header .header_full .depth1_list {
   color: #fff;
-  padding-top: 8.98438vw;
+  padding-top: 9.375vw;
+  padding-bottom: 28.51562vw;
 }
 
 .header .header_full .depth1_list .depth1 {
-  margin-bottom: 4.6875vw;
+  margin-bottom: 1.95312vw;
 }
 
-.header .header_full .depth1_list .depth1.active > a::after {
-  content: "";
-  width: 17.96875vw;
-  height: 2px;
-  background-color: red;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.header .header_full .depth1_list .depth1:first-of-type > a::after, .header .header_full .depth1_list .depth1:last-of-type > a::after {
+  display: none;
 }
 
 .header .header_full .depth1_list .depth1:last-of-type {
@@ -509,23 +501,27 @@ em {
 .header .header_full .depth1_list .depth1 > a {
   font-size: 5vw;
   line-height: 14.0625vw;
-  font-weight: 500;
+  font-weight: bold;
   color: #fff;
   position: relative;
 }
 
-.header .header_full .depth1_list .depth1 > a::before {
+.header .header_full .depth1_list .depth1 > a::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 80%;
-  height: 1px;
-  background-color: #333;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url(/m/static/images/common/icon_header_arrow_gray.png) no-repeat center center/contain;
+  width: 3.75vw;
+  height: 1.875vw;
 }
 
 .header .header_full .depth1_list .depth1 .depth2_list {
-  padding: 3.125vw 1.5625vw 0;
+  padding: 1.95312vw 0;
+  border-bottom: 1px solid #333333;
+  display: none;
+  overflow: hidden;
 }
 
 .header .header_full .depth1_list .depth1 .depth2_list .depth2 {
@@ -536,73 +532,44 @@ em {
 }
 
 .header .header_full .depth1_list .depth1 .depth2_list .depth2 li {
-  width: 100%;
-}
-
-.header .header_full .depth1_list .depth1 .depth2_list .depth2 li.active a {
-  color: red;
-  font-weight: 500;
+  width: 50%;
 }
 
 .header .header_full .depth1_list .depth1 .depth2_list .depth2 li a {
-  font-size: 3.75vw;
-  line-height: 9.6875vw;
-  color: #666;
+  font-size: 4.375vw;
+  line-height: 8.20312vw;
+  color: #999999;
+  font-weight: 300;
 }
 
-.header .header_full .depth1_list .depth1 .depth2_list .depth2 li a.active {
-  font-weight: 500;
+.header .header_full .depth1_list .depth1.on > a {
+  color: red;
 }
 
-.header .header_full .wrap_etc {
+.header .header_full .depth1_list .depth1.on > a::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.header .header_full .store {
   position: absolute;
-  padding-left: 6.64062vw;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 4.6875vw;
+  width: calc(100% - 10.9375vw);
+  height: 11.71875vw;
+  background: red;
+  border-radius: 6.25vw;
 }
 
-.header .header_full .wrap_etc .wrap_lang {
+.header .header_full .store a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-}
-
-.header .header_full .wrap_etc .wrap_lang li a {
-  color: #666;
-  padding: 0 3.125vw;
-}
-
-.header .header_full .wrap_etc .wrap_lang li:nth-of-type(2) a {
-  position: relative;
-}
-
-.header .header_full .wrap_etc .wrap_lang li:nth-of-type(2) a::before, .header .header_full .wrap_etc .wrap_lang li:nth-of-type(2) a::after {
-  content: "";
-  position: absolute;
-  background-color: #333;
-  width: 1px;
+  justify-content: center;
   height: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.header .header_full .wrap_etc .wrap_lang li:nth-of-type(2) a::before {
-  left: 0;
-}
-
-.header .header_full .wrap_etc .wrap_lang li:nth-of-type(2) a::after {
-  right: 0;
-}
-
-.header .header_full .wrap_etc .wrap_lang li.active a {
   color: #fff;
-}
-
-.header .header_full .wrap_etc .contact {
-  width: 36.32812vw;
+  font-weight: 600;
+  font-size: 4.375vw;
 }
 
 .header.open > .inner .btn_menu:before {

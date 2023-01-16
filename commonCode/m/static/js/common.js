@@ -6,7 +6,7 @@ $(function () {
     $(".header .header_full .depth1").click(function () {
         var _this = this;
 
-        $("header .header_full .depth1").each(function (j, v2) {
+        $(".header .header_full .depth1").each(function (j, v2) {
             if ($(_this).index() == $(this).index()) {
                 $(_this).toggleClass("active");
                 $(_this).find(".depth2_list").stop().slideToggle();
