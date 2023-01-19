@@ -5,7 +5,7 @@
 
 **everygood - 트루델
 
- - product hover 시 왼쪽에 똑같은 사진 보이기
+ - product hover 시 왼쪽에 똑같은 사진 보이기 
 
 
 **이스트힐 
