@@ -27,7 +27,9 @@
                 <script>
                     var arr = [200, 100, 300];
                     arr.splice(2, 0, "10000"); //시작부분, 시작부분에 들어갈 값 뒤부터 삭제할 값, "들어갈 값"
-                    document.write(`<p class='a_txt'> 답&nbsp; ${arr} </p><br><strong>*시작부분, 시작부분에 들어갈 값 뒤부터 삭제할 값, '들어갈 값'</strong>`);
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; ${arr} </p><br><strong>*시작부분, 시작부분에 들어갈 값 뒤부터 삭제할 값, '들어갈 값'</strong>`
+                        );
                 </script>
             </div>
             <!-- 3 -->
@@ -37,7 +39,9 @@
                     var arr = [100, 200, 300];
                     console.log(typeof arr);
 
-                    document.write(`<p class='a_txt'> 답&nbsp; 3 </p><br><strong>*객체가 정답  자바스크립트에서는 배열의 타입을 별도로 제공하지 않음. 배열 == 객체</strong>`);
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; 3 </p><br><strong>*객체가 정답  자바스크립트에서는 배열의 타입을 별도로 제공하지 않음. 배열 == 객체</strong>`
+                        );
                 </script>
             </div>
             <!-- 4 -->
@@ -96,7 +100,9 @@
                         temperature: 36,
                         eyesight: 1,
                     };
-                    document.write(`<p class='a_txt'> 답&nbsp; ${d["weight"]}  , 84  </p><br><strong>*키가 중복되었을 경우, 마지막 키의 값을 가져옴</strong>`);
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; ${d["weight"]}  , 84  </p><br><strong>*키가 중복되었을 경우, 마지막 키의 값을 가져옴</strong>`
+                        );
                 </script>
             </div>
             <!-- 9 -->
@@ -109,9 +115,12 @@
                         hour = "11",
                         minute = "34",
                         second = "27";
-                    var result = year.concat("/" + month + "/" + day + " " + hour + ":" + minute + ":" + second); // 2019/04/26 11:34:27
+                    var result = year.concat("/" + month + "/" + day + " " + hour + ":" + minute + ":" +
+                    second); // 2019/04/26 11:34:27
 
-                    document.write(`<p class='a_txt'> 답&nbsp; ${result} </p><br><strong>*concat 은 두 개의 문자열을 하나의 문자열로 만들어주는 역할을 하는 함수 입력값을 문자열 대신 배열을 사용하면 두 개의 배열을 하나의 배열로 만들어주는 역할 함수</strong>`);
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; ${result} </p><br><strong>*concat 은 두 개의 문자열을 하나의 문자열로 만들어주는 역할을 하는 함수 입력값을 문자열 대신 배열을 사용하면 두 개의 배열을 하나의 배열로 만들어주는 역할 함수</strong>`
+                        );
                 </script>
             </div>
             <!-- 10 -->
@@ -183,9 +192,9 @@
                     // var n = prompt("숫자를 입력하세요.");
                     // if (n % 3 == 0) {
                     document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p>`);
-                        // } else {
-                        //     document.write("<p class='a_txt'>" + n + "</p>");
-                        // }
+                    // } else {
+                    //     document.write("<p class='a_txt'>" + n + "</p>");
+                    // }
                 </script>
             </div>
             <!-- 15 -->
@@ -195,7 +204,7 @@
                     // var information = prompt("이름을 적어주세요.");
                     //if (information == "김다정") {
                     document.write(`<p class='a_txt'> 안녕하세요. 저는 / 주석 처리 /입니다.</p>`);
-                        //}
+                    //}
                 </script>
             </div>
             <!-- 16 -->
@@ -204,7 +213,9 @@
                 <script>
                     //var roquaqe = prompt("거꾸로를 입력하면 로꾸거가 출력됩니다.");
                     //var change = roquaqe.split("").reverse().join("");
-                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리</p><br><strong>*.join('')을 붙여야지 로,꾸,꺼 로 나오던게 로꾸꺼로 나옴 *마지막으로 join('')은 배열의 요소들을 하나의 문자열로 합칩니다. </strong>`);
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; 주석 처리</p><br><strong>*.join('')을 붙여야지 로,꾸,꺼 로 나오던게 로꾸꺼로 나옴 *마지막으로 join('')은 배열의 요소들을 하나의 문자열로 합칩니다. </strong>`
+                        );
                 </script>
             </div>
             <!-- 17 -->
@@ -214,9 +225,9 @@
                     // var q = prompt("키가 몇입니까?");
                     // if (q >= 150) {
                     document.write(`<p class='a_txt'> 답&nbsp; 주석 처리</p>`);
-                        // } else {
-                        //     document.write("<p class='a_txt'> 답&nbsp;No</p>");
-                        // }
+                    // } else {
+                    //     document.write("<p class='a_txt'> 답&nbsp;No</p>");
+                    // }
                 </script>
             </div>
             <!-- 18 -->
@@ -268,7 +279,9 @@
             <div class="question">
                 <p class="q_txt">21. set은 어떻게 만드나요?</p>
                 <script>
-                    document.write(`<p class='a_txt'> 답&nbsp; 3,5 </p><br><strong>*set이란, 중복되지 않는 데이터를 저장하는 데이터 구조입니다. set 객체 안에 있는 데이터는 중복을 허용하지 않습니다. </strong>`);
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; 3,5 </p><br><strong>*set이란, 중복되지 않는 데이터를 저장하는 데이터 구조입니다. set 객체 안에 있는 데이터는 중복을 허용하지 않습니다. </strong>`
+                        );
                 </script>
             </div>
             <!-- 22 -->
@@ -282,7 +295,9 @@
             <div class="question">
                 <p class="q_txt">23. OX문제</p>
                 <script>
-                    document.write(`<p class='a_txt'> 답&nbsp; X 3.33333333 </p><br><strong>*정수를 출력하고자 할 때 Math.floor()</strong>`);
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; X 3.33333333 </p><br><strong>*정수를 출력하고자 할 때 Math.floor()</strong>`
+                        );
                 </script>
             </div>
             <!-- 24 -->
@@ -387,7 +402,14 @@
             </div>
             <!-- 31 -->
             <div class="question">
-                <p class="q_txt">31. 문자열 만들기</p>
+                <p class="q_txt">31. 자바스크립트 자료형의 복잡도</p>
+                <script>
+                    document.write(`<p class='a_txt'> 답&nbsp; 3,5 </p><br>`);
+                </script>
+            </div>
+            <!-- 32 -->
+            <div class="question">
+                <p class="q_txt">32. 문자열 만들기</p>
                 <script>
                     const sentence = "안녕하세요 저는 정다슬입니다. 저는 관광과를 나왔는데, 웹퍼블리셔가 되었네용?!"
                     // const sentence = prompt("자기소개서를 넣어주세요");
@@ -396,9 +418,9 @@
                     document.write(`<p class='a_txt'> 답&nbsp; ${sentenceLength} </p><br>`);
                 </script>
             </div>
-            <!-- 32 -->
+            <!-- 33 -->
             <div class="question">
-                <p class="q_txt">32. 거꾸로 출력하기</p>
+                <p class="q_txt">33. 거꾸로 출력하기</p>
                 <script>
                     // let numSplit = prompt("숫자를 띄어서 입력해주세요").split(" ").reverse();
                     // let storage = [];
@@ -406,9 +428,9 @@
                     document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
                 </script>
             </div>
-            <!-- 33 -->
+            <!-- 34 -->
             <div class="question">
-                <p class="q_txt">33. sort 구현하기</p>
+                <p class="q_txt">34. sort 구현하기</p>
                 <script>
                     // let numHeight = prompt("키를 띄어서 입력해주세요").split(" ");
                     // function height(numHeight){
@@ -421,6 +443,66 @@
                     //     }
                     // }
                     document.write(`<p class='a_txt'> 답&nbsp;  </p><br>`);
+                </script>
+            </div>
+            <!-- 35 -->
+            <div class="question">
+                <p class="q_txt">35. Factory 함수 사용하기</p>
+                <script>
+                    function one(n) {
+                        function two(m) {
+                            return Math.pow(m, n);
+
+                        }
+                        return two;
+                    }
+                    const oneA = one(2);
+                    const oneB = one(3);
+                    const oneC = one(4);
+                    document.write(`<p class='a_txt'> 답&nbsp; ${oneA(10)}, ${oneB(10)}, ${oneC(10)} </p><br>`);
+                </script>
+            </div>
+            <!-- 36 -->
+            <div class="question">
+                <p class="q_txt">36. 구구단 출력하기</p>
+                <script>
+                    // const gugudan = prompt("몇 단을 실행할까요?");
+                    const gugudan = 5;
+                    let num = "";
+                    for (i = 1; i <= 9; i++) {
+                        num += gugudan * i + " ";
+                    }
+                    document.write(`<p class='a_txt'> 답&nbsp; ${num} </p><br>`);
+                </script>
+            </div>
+            <!-- 37 -->
+            <div class="question">
+                <p class="q_txt">37. 반장 선거</p>
+                <script>
+                    // const cm = prompt("선거 이름을 띄어쓰기로 적어주세요").split(" ");
+                    // let arrCm = {};
+                    // let winner = "";
+
+                    // for(let index in cm){
+                    //     let val = cm[index];
+                    //     // console.log(val); //cm값
+                    //     // console.log(arrCm[val]);//undefined
+                    //     arrCm[val] = arrCm[val] === undefined ? 1 : arrCm[val] = arrCm[val] + 1;
+                    //     console.log(arrCm[val]);
+                    // }
+                    // winner = Object.keys(arrCm).reduce( function(a,b){
+                    //     return arrCm[a] > arrCm[b] ? a : b
+                    // })
+
+                    // document.write(`${winner}(이) 가 ${arrCm[winner]}표로 반장임.`);
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 38 -->
+            <div class="question">
+                <p class="q_txt">38. 호준이의 아르바이트</p>
+                <script>
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
                 </script>
             </div>
         </div>
