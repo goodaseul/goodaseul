@@ -9,11 +9,7 @@
 </head>
 
 <body>
-    <!-- <div>사용자:</div>
-    <ul>
-        <li>John</li>
-        <li>Pete</li>
-    </ul> -->
+   
     <table id="table">
         <tr>
             <td>1:1</td>
@@ -51,6 +47,18 @@
             <td>5:5</td>
         </tr>
     </table>
+    <div hidden id="elem"> 안녕하세요 만나서 반갑지 않습니다. 왜냐면 저는 안보이니까요.</div>
+    <ul id="user">
+        <li>John
+            <ul>
+                <li>머야 또 안에 있어?</li>
+                <li>머야 또 안에 있어?</li>
+                <li>머야 또 안에 있어?</li>
+                <li>머야 또 안에 있어?</li>
+            </ul>
+        </li>
+        <li>Pete</li>
+    </ul>
     <script>
         let table = document.body.firstElementChild;
 
@@ -60,14 +68,50 @@
             console.log(row.cells[i])
             row.cells[i].style.background = "red";
         }
+        /*
+            // 1번  `id="age-table"`인 테이블
+                let ageTable = document.getElementById("age-table");
+            // 2번 테이블 내의 `label` 요소 모두
+                ageTable.getElementsByTagName('label');
+                document.querySelectorAll("#age-table label");
+            // 3번 테이블 내의 첫 번째 `td`(Age가 적힌 곳)
+                table.row[0].cells[0];
+                table.getElementsByTagName('td')[0];
+                table.querySelector('td');
+            // 4번 `name="search"`인 `form`
+                let formMake = document.getElementsByName("search")[0];
+                document.querySelector('form[name="search"]')
+            // 5번 폼의 첫 번째 `input`
+                formMake.getElementsByTagName('input')[0];
+                formMake.querySelector('input');
+            // 6번 폼의 마지막 `input`
+                let input = formMake.querySelectorAll('input');
+                input[input.length - 1];
+        */
 
+        // console.log(document.body); //DOM 트리 출력
+        // console.dir(document.body); //DOM 객체 출력
 
-        document.getElementById("age-table");
-        document.getElementsByTagName('label').lenght;
+        // document.body.innerHTML += "<div>안녕하세요? </div>";
+        // document.body.innerHTML = "반갑습니당"
 
-        document.getElementsByName("search")[0];
-        document.querySelector('input');
-        document.querySelectorAll('input')[document.querySelectorAll('input').length - 1]
+        // setInterval(() => elem.hidden = !elem.hidden, 1000);
+        
+        // let user = document.getElementById("user").children;
+        // for(let j =0; j < user.length; j++){
+        //     console.log(user[j].textContent , user.length)
+        // }
+
+        // for( let li of document.querySelectorAll('li')){
+        //     let title = li.firstChild.data;
+
+        //     title = title.trim();
+
+        //     let count = li.getElementsByClassName('li').length;
+        //     alert(title + ':' + count)
+        // }
+            // alert(document);
+    
     </script>
 </body>
 
