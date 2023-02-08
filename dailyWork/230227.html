@@ -9,7 +9,7 @@
 </head>
 
 <body>
-   
+
     <table id="table">
         <tr>
             <td>1:1</td>
@@ -39,7 +39,7 @@
             <td>4:4</td>
             <td>4:5</td>
         </tr>
-        <tr>
+        <tr>u
             <td>5:1</td>
             <td>5:2</td>
             <td>5:3</td>
@@ -58,6 +58,20 @@
             </ul>
         </li>
         <li>Pete</li>
+    </ul>
+    <div show-info="name"></div>
+    <div show-info="age"></div>
+    <div id="order" class="order" data-order-state="new">
+        A new order.
+    </div>
+    <div data-widget-name="menu">Choose the genre</div>
+    <ul>
+        <li><a class="out_link" href="http://google.com">http://google.com</a></li>
+        <li><a class="out_link" href="/tutorial">/tutorial.html</a></li>
+        <li><a class="out_link" href="local/path">local/path</a></li>
+        <li><a class="out_link" href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+        <li><a class="out_link" href="http://nodejs.org">http://nodejs.org</a></li>
+        <li><a class="out_link" href="http://internal.com/test">http://internal.com/test</a></li>
     </ul>
     <script>
         let table = document.body.firstElementChild;
@@ -96,7 +110,7 @@
         // document.body.innerHTML = "반갑습니당"
 
         // setInterval(() => elem.hidden = !elem.hidden, 1000);
-        
+
         // let user = document.getElementById("user").children;
         // for(let j =0; j < user.length; j++){
         //     console.log(user[j].textContent , user.length)
@@ -110,8 +124,53 @@
         //     let count = li.getElementsByClassName('li').length;
         //     alert(title + ':' + count)
         // }
-            // alert(document);
-    
+        // alert(document);
+        let user = {
+            name: "Pege",
+            age: 26,
+        }
+
+        for (let div of document.querySelectorAll("[show-info]")) {
+            let field = div.getAttribute('show-info');
+            console.log(div, field, user[field]);
+            div.innerHTML = user[field]
+        }
+
+        console.log(order.dataset.orderState);
+        order.dataset.orderState = "cancled";
+        console.log(order.dataset.orderState);
+
+        let attr = document.querySelector("[data-widget-name]")
+        console.log(attr.dataset.widgetName, attr.getAttribute("data-widget-name"));
+
+        let link = document.querySelectorAll('.out_link');
+        // for (links in link) {
+        //     console.log(links)
+        // }
+        link.forEach((item, index) => {
+            // let search = item.indexOf('://');
+            console.log(item.href)
+            let attrLink = item.getAttribute('href');
+            if (attrLink.indexOf("://") > -1) {
+                item.style.color = 'orange';
+
+            }
+            if (item.href.indexOf("http://internal.com") > -1) {
+                item.style.color = 'black';
+            }
+        })
+
+        let selector = 'a[href*="://"]:not([href^="http://internal.com"])';
+        let links = document.querySelectorAll(selector);
+
+        links.forEach(element => {
+            element.style.color = "orange";
+        });
+
+        let createDiv = document.createElement('div');
+        createDiv.className = 'alert';
+        createDiv.innerHTML = "안녕하세요? 만나서 반갑습니다.";
+        document.body.append(createDiv);
     </script>
 </body>
 
