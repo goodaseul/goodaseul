@@ -1,7 +1,15 @@
-.alert_box{
+//230213
+.alert-box{
     background-color: skyblue;
     padding: 20px;
     color: white;
     border-radius: 5px;
     display: none;
+}
+//230214
+.list-group{
+    display: none;
+    &.show{
+        display: block;
+    }
 }
