@@ -2,8 +2,7 @@
 Last Updated: 2022/02
 */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -222,8 +221,7 @@ em {
 
 .btn {
   border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   display: block;
   text-align: center;
   color: inherit;
@@ -318,9 +316,7 @@ em {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   border-radius: 0;
 }
 
@@ -331,7 +327,6 @@ em {
 .select-box .icon-drop {
   background-image: url(/m/static/images/common/icon-drop.png);
   position: absolute;
-  -webkit-transition: 0.2s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: 0.2s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -355,8 +350,7 @@ em {
   width: 100%;
   height: 100%;
   border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .check-box input + label,
@@ -404,12 +398,8 @@ em {
 
 .check-box input + label,
 .radio_box input + label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   cursor: pointer;
 }
 
@@ -435,17 +425,10 @@ em {
 }
 
 .header > .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
 }
 
@@ -466,12 +449,8 @@ em {
   height: 0.625vw;
   background: #fff;
   border-radius: 2.34375vw;
-  -webkit-transition: top 0.1s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
-  transition: top 0.1s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out, top 0.1s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s;
-  transition: transform 0.2s ease-in-out, top 0.1s ease-in-out 0.2s, opacity 0.1s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
 }
 
 .header > .inner .btn_menu span.top {
@@ -532,8 +511,7 @@ em {
   position: absolute;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   background: url(/m/static/images/common/icon_header_arrow_gray.png) no-repeat center center/contain;
   width: 3.75vw;
   height: 1.875vw;
@@ -548,14 +526,9 @@ em {
 
 .header .header_full .depth1_list .depth1 .depth2_list .depth2 {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .header .header_full .depth1_list .depth1 .depth2_list .depth2 li {
@@ -574,15 +547,13 @@ em {
 }
 
 .header .header_full .depth1_list .depth1.on > a::after {
-  -webkit-transform: translateY(-50%) rotate(180deg);
-          transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .header .header_full .store {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 4.6875vw;
   width: calc(100% - 10.9375vw);
   height: 11.71875vw;
@@ -591,17 +562,10 @@ em {
 }
 
 .header .header_full .store a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   color: #fff;
   font-weight: 600;
@@ -622,26 +586,20 @@ em {
   top: 45%;
   width: 6.25vw;
   background-color: #fff;
-  -webkit-transition: top 0.1s ease-in-out, opacity 0.1s ease-in-out, -webkit-transform 0.2s ease-in-out 0.1s;
-  transition: top 0.1s ease-in-out, opacity 0.1s ease-in-out, -webkit-transform 0.2s ease-in-out 0.1s;
   transition: transform 0.2s ease-in-out 0.1s, top 0.1s ease-in-out, opacity 0.1s ease-in-out;
-  transition: transform 0.2s ease-in-out 0.1s, top 0.1s ease-in-out, opacity 0.1s ease-in-out, -webkit-transform 0.2s ease-in-out 0.1s;
 }
 
 .header.open > .inner .btn_menu span.top {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
 .header.open > .inner .btn_menu span.middle {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
+  transform: rotate(135deg);
   opacity: 0;
 }
 
 .header.open > .inner .btn_menu span.bottom {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
+  transform: rotate(225deg);
 }
 
 .footer {
@@ -655,15 +613,6 @@ em {
   /*common*/
 }
 
-@-webkit-keyframes loading {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 @keyframes loading {
   from {
     width: 0%;
@@ -674,34 +623,12 @@ em {
 }
 
 /* ANIMATION */
-@-webkit-keyframes bgScale {
-  from {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
 @keyframes bgScale {
   from {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
   }
   to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@-webkit-keyframes loadTxt {
-  from {
-    bottom: -0.78125vw;
-  }
-  to {
-    opacity: 1;
-    bottom: 0px;
+    transform: scale(1);
   }
 }
 
@@ -712,15 +639,6 @@ em {
   to {
     opacity: 1;
     bottom: 0px;
-  }
-}
-
-@-webkit-keyframes loadBar {
-  from {
-    width: 0%;
-  }
-  to {
-    width: 28.51562vw;
   }
 }
 

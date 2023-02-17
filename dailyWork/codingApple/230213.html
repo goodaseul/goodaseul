@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>230213/1~5</title>
+    <title>230213/step1/1~5</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="alert-box" id="alert">
-        <p class="title">알림창임</p> 
+        <p class="title">알림창임</p>
         <button id="close">닫기</button>
     </div>
     <button onclick="알림창열기('block', '아이디입력하세요');">버튼1</button>
     <button onclick="알림창열기('block','비밀번호를입력하세요');">버튼2</button>
     <script>
-        function 알림창열기(구멍,비밀){
+        function 알림창열기(구멍, 비밀) {
             document.getElementById('alert').style.display = 구멍;
             document.querySelector(".alert > p").innerText = 비밀;
         }
 
-        document.getElementById("close").addEventListener('mouseover', function(){
+        document.getElementById("close").addEventListener('mouseover', function () {
             document.getElementById('alert').style.display = 'none';
         });
 
     </script>
 </body>
+
 </html>
