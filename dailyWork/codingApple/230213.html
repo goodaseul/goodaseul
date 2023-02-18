@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>230213/step1/1~5</title>
+    <title>230213/step1</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -19,7 +19,7 @@
     <script>
         function 알림창열기(구멍, 비밀) {
             document.getElementById('alert').style.display = 구멍;
-            document.querySelector(".alert > p").innerText = 비밀;
+            document.querySelector(".alert > p").innerHTML = 비밀;
         }
 
         document.getElementById("close").addEventListener('mouseover', function () {

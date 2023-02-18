@@ -1,3 +1,7 @@
+:root {
+  scroll-behavior: auto;
+}
+
 .alert-box {
   background-color: skyblue;
   padding: 20px;
@@ -9,7 +13,6 @@
 .list-group {
   display: none;
 }
-
 .list-group.show {
   display: block;
 }
@@ -25,7 +28,6 @@
   opacity: 0;
   transition: all 1s;
 }
-
 .modal-ex.show-modal {
   opacity: 1;
   top: 0;
@@ -34,4 +36,35 @@
 body.dark {
   background-color: black;
   color: white;
+}
+
+.slide-container {
+  width: 600vw;
+  transition: all 1s;
+}
+.slide-container .slide-box {
+  width: 100vw;
+  float: left;
+}
+.slide-container .slide-box img {
+  width: 100%;
+}
+
+.wrap-nav {
+  position: fixed;
+  width: 100%;
+  padding: 0;
+  z-index: 5;
+}
+.wrap-nav .navbar .navbar-brand {
+  font-size: 30px;
+  transition: all 0.2s;
+}
+.wrap-nav .navbar .navbar-brand.active {
+  font-size: 20px;
+}
+
+.lorem {
+  position: relative;
+  top: 100px;
 }

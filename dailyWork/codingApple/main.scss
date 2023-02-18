@@ -1,3 +1,6 @@
+:root {
+    scroll-behavior: auto;
+}
 //230213
 .alert-box {
     background-color: skyblue;
@@ -36,4 +39,38 @@ body.dark {
     background-color: black;
     color: white;
 }
-//230217
+//230218
+
+.slide-container {
+    width: 600vw;
+    transition: all 1s;
+    // transform: translateX(-100vw);
+    .slide-box {
+        width: 100vw;
+        float: left;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.wrap-nav {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    z-index: 5;
+    .navbar {
+        .navbar-brand {
+            font-size: 30px;
+            transition: all 0.2s;
+            &.active {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.lorem {
+    position: relative;
+    top: 100px;
+}
