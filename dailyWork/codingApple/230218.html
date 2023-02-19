@@ -15,26 +15,50 @@
 </head>
 
 <body>
-    <div class="wrap-nav">
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <span class="navbar-brand">Navbar</span>
-                <button class="navbar-toggler" type="button">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div class="now-per"></div>
+    <button class="login">로그인</button>
+    <div class="modal-ex">
+        <form action="success.html">
+            <!--서버로 유저정보 전송함 action-->
+            <div class="my-3">
+                <input type="text" class="form-control">
             </div>
-        </nav>
+            <div class="my-3">
+                <input type="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">전송</button>
+            <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
     </div>
-    <div class="lorem" style=" width: 200px; height: 100px; overflow-y: scroll;">Lorem ipsum dolor sit amet consectetur
-        adipisicing
-        elit. Quibusdam, molestiae? Temporibus vitae asperiores ex nostrum repudiandae magni quia similique. Adipisci
-        quae impedit in autem molestiae incidunt quas eligendi ipsam laborum?</div>
-    <div style="height: 1000px;"></div>
+    <div class="wrap-cont">
+        <div class="wrap-nav">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                    <span class="navbar-brand">Navbar</span>
+                    <button class="navbar-toggler" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="lorem" style=" width: 200px; height: 100px; overflow-y: scroll;">Lorem ipsum dolor sit amet
+            consectetur
+            adipisicing
+            elit. Quibusdam, molestiae? Temporibus vitae asperiores ex nostrum repudiandae magni quia similique.
+            Adipisci
+            quae impedit in autem molestiae incidunt quas eligendi ipsam laborum?</div>
+        <div style="height: 2000px;"></div>
+    </div>
     <script>
 
         window.addEventListener("scroll", function () {
+            let currentPer = (window.scrollY / (document.querySelector('body').clientHeight - window.innerHeight)) * 100
+            console.log(currentPer, window.scrollY, document.querySelector('body').clientHeight, window.innerHeight);
+            document.querySelector('.now-per').style.width = currentPer + '%';
+        })
+
+        window.addEventListener("scroll", function () {
             // $(window).scrollTop() == window.scrollY
-            console.log(window.scrollY);
             if (window.scrollY > 10) {
                 document.querySelector(".navbar-brand").classList.add("active");
             } else {
@@ -71,6 +95,26 @@
 
         console.log(discount(70, false));
         console.log(discount(10, true));
+
+        document.querySelector(".btn-danger").addEventListener("click", function () {
+            document.querySelector(".modal-ex").classList.remove('show-modal');
+        })
+        document.querySelector(".login").addEventListener("click", function () {
+            document.querySelector(".modal-ex").classList.add('show-modal');
+        })
+
+        document.querySelector(".modal-ex").addEventListener("click", (e) => {
+            /*
+            e.target; //유저가 실제 누른거
+            e.currentTarget; // == this //이벤트 리스너 달린 곳 ~^^
+            e.preventDefault(); // 이벤트 기본동작 막아줌
+            e.stopPropagation(); // 상위요소로 이벤트 버블링 막아줌
+            */
+            if (e.target == document.querySelector(".modal-ex")) {
+                document.querySelector(".modal-ex").classList.remove('show-modal');
+            }
+        })
+
     </script>
 </body>
 
