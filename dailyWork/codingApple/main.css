@@ -118,3 +118,7 @@ ul.list::after {
 .tab-content.show {
   display: block;
 }
+
+.form-select.hide {
+  display: none;
+}

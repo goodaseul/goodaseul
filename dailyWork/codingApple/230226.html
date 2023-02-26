@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let attendance = ['김유영', '정다슬', '디저트39', '디저트39', '핸드크림'];
+        function nameSearch(name) {
+            attendance.forEach((item, index) => {
+                if (item == name) {
+                    return console.log(1);
+                }
+            })
+        }
+        nameSearch('정다슬');
+
+        function gugudan() {
+            for (i = 2; i <= 9; i++) {
+                for (j = 1; j <= 9; j++) {
+                    let sum = i * j;
+                    console.log(`${i} * ${j} = ${sum}`)
+                    // console.log(`i * j `)
+                }
+            }
+        }
+        gugudan();
+
+        function sum(a, b) {
+            let prev = a;
+            let sum = 0;
+            prev.forEach((item) => {
+                sum += item
+            })
+            console.log(sum)
+            sum = sum / prev.length;
+            console.log(sum)
+            if (sum < b) {
+                let wow = b - sum
+                console.log(`평균보다 ${wow}점이 올랐네요`)
+            } else {
+                console.log("재!수!추!천!")
+            }
+        }
+        sum([10, 20, 30, 40, 50], 46)
+    </script>
+</body>
+
+</html>

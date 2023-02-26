@@ -42,6 +42,24 @@
         </div>
     </div>
 
+    <form class="container my-5 form-group">
+        <p>상품선택</p>
+        <select id="selectBox" class="form-select mt-2">
+            <option value="hat">모자</option>
+            <option value="shirt">셔츠</option>
+            <option value="pants">바지</option>
+        </select>
+        <select class="form-select form-select-2 mt-2 hide">
+            <option>95</option>
+            <option>100</option>
+            <option>105</option>
+            <option>110</option>
+        </select>
+    </form>
+
+    <div id="test">
+
+    </div>
     <script>
         var products = [
             { id: 0, price: 70000, title: 'Blossom Dress' },
@@ -53,9 +71,74 @@
         let cardPrice = document.querySelectorAll('.card-body p');
 
         for (i = 0; i < cardTitle.length; i++) {
-            console.log(cardTitle[i], i);
+            // console.log(cardTitle[i], i);
             cardTitle[i].innerHTML = products[i].title;
             cardPrice[i].innerHTML = '가격 : ' + products[i].price;
+        }
+
+        // $('#selectBox').change(function () {
+        //     var result = $('#selectBox option:selected').val();
+        //     if (result == 'shirt') {
+        //         $('.form-select-2').show();
+        //     } else {
+        //         $('.form-select-2').hide();
+        //     }
+        // });
+
+
+        let pants = [28, 30, 32, 35, 40];
+        let shirts = [95, 100, 105];
+
+        let result = document.querySelector("#selectBox");
+        result.addEventListener("input", function () {
+            let form2 = document.querySelector('.form-select-2')
+
+            if (result.value == 'shirt') {
+                console.log(1)
+                form2.classList.remove('hide')
+                form2.innerHTML = '';
+                shirts.forEach((shirt) => {
+                    form2.insertAdjacentHTML('beforeend', `<option> ${shirt} </option>`);
+                })
+            }
+            else if (result.value == 'pants') {
+                form2.classList.remove('hide')
+                form2.innerHTML = '';
+                // pants.forEach((pant) => {
+                //     form2.insertAdjacentHTML('beforeend', `<option> ${pant} </option>`);
+                //     // insertAdjacentHTML() == append()
+                // })
+                // arrow function 쓰면 함수 안의 this 를 밖에서 찾아서 this 뜻이 달라짐
+                // function 안에서 쓰면 this가 알맞게 재정의됨.!!!!!!!!!!!!!1
+                pants.forEach(function (pant) {
+                    console.log(this)
+                    form2.insertAdjacentHTML('beforeend', `<option> ${pant} </option>`);
+                    // insertAdjacentHTML() == append()
+                })
+            } else {
+                form2.classList.add('hide')
+            }
+
+
+
+        })
+
+
+        // let a = document.createElement('p');
+        // a.innerHTML = 'hhhi';
+        // document.querySelector("#test").appendChild(a);
+
+        let 템플릿 = `< p > 안녕</p >`;
+        document.querySelector("#test").insertAdjacentHTML('beforeend', 템플릿)
+
+        //객체 반복문 FOR IN!!!!!!!!!!!!!1
+        let obj = {
+            name: 'jeong',
+            age: 20,
+        }
+
+        for (let key in obj) {
+            console.log(obj[key], key)
         }
 
     </script>
