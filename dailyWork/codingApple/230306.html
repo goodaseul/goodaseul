@@ -53,9 +53,7 @@
             { id: 1, price: 50000, title: 'Springfield Shirt' },
             { id: 2, price: 60000, title: 'Black Monastery' }
         ]
-        $("#more").on("click", function(items, tag){
-            common(products, elem)
-        })
+        common(products, elem)
         $("#name").on("click", function( items, tag){
             products.sort(function(a,b){
                 if(a.title<b.title){
@@ -83,10 +81,37 @@
                     <img src="https://via.placeholder.com/600" class="w-100">
                     <h5>${item.title}</h5>
                     <p>가격 : ${item.price}</p>
+                    <button class="buy">구매</button>
                 </div> `;
                 document.querySelector('.row').insertAdjacentHTML('beforeend', tag);
             })
         }
+        let counter = 0;
+            $('.buy').on("click", function(e){
+
+                let name = {
+                    names :$(e.target).siblings('h5').html(),
+                    counter : counter,
+                }
+
+                if(window.localStorage && window.localStorage.getItem("cart")){
+                    let cartGet = JSON.parse(localStorage.getItem('cart'));
+                    cartGet.push(name); // push a new student inside of it
+                    
+                }
+
+                if( localStorage.getItem("cart") !== name.names) {
+                    counter++;
+                    localStorage.setItem("cart", JSON.stringify([name]));
+
+                }else{
+                    let cart = localStorage.setItem('cart', JSON.stringify([name]))
+                    
+                    // localStorage.setItem("cart", JSON.stringify(cartGet));
+                }    
+
+            })
+
     </script>
 </body>
 </html>
