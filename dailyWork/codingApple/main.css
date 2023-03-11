@@ -122,3 +122,20 @@ ul.list::after {
 .form-select.hide {
   display: none;
 }
+
+.card-background {
+  height: 3000px;
+  margin-top: 800px;
+  margin-bottom: 1600px;
+}
+.card-background .card-box {
+  position: sticky;
+  top: 400px;
+  margin-top: 200px;
+  transition: all 0.2s;
+}
+.card-background .card-box img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+}
