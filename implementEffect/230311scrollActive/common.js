@@ -2,7 +2,7 @@ $(function () {
     const navHeight = document.querySelector(".nav").clientHeight;
     $(".nav ul li > a").click(function (event) {
         event.preventDefault();
-        const num = $(".nav ul li > a").index($(this));
+        const num = $(".nav ul li > a").index($(event.currentTarget));
 
         $(".nav ul li > a").removeClass("active");
         $(`.nav ul li > a:eq(${num})`).addClass("active");

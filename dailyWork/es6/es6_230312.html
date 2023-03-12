@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6_230312</title>
+</head>
+
+<body>
+    <script>
+        if (true) {
+            let a = 1;
+            var b = 2;
+            if (true) {
+                let b = 3;
+            }
+            // console.log(b)
+        }
+        for (let i = 1; i < 6; i++) {
+            setTimeout(() => {
+                // console.log(i);
+            }, i * 1000);
+            // console.log(i)
+        }
+
+        // let 이름 = '정다슬';
+        // let 문자 = `안녕하세요 ${이름} 입니다`;
+        // function 해체분석기(문자들, 변수들) {
+        //     console.log(문자들[1] + 변수들 + 문자들[0]);
+        //     console.log(변수들);
+        // }
+        // 해체분석기`안녕하세요 ${이름} 입니다`
+
+        let pants = 0;
+        let socks = 100;
+        function dissolution(letter, num, num2) {
+            console.log(`${letter[1]} ${num} ${letter[0]} ${num2}`)
+            if (num == 0) {
+                console.log(`바지 다 팔렸삼`)
+            }
+        }
+        dissolution`바지 ${pants} 양말 ${socks}`;
+
+
+        let array = ['hello', 'world'];
+        console.log(...array);
+
+        var text = 'hello';
+        console.log(...text)
+
+        let aaa = [1, 2, 3];
+        let bbb = [4, 5];
+        let ccc = [...aaa, ...bbb]
+        console.log(ccc)
+
+        let person = {
+            인사: function () {
+                console.log(this.name + '안녕');
+            }
+        }
+        let person2 = {
+            name: '정다슬',
+        }
+        person.인사.apply(person2, [1, 2]);
+        person.인사.call(person2, 1, 2);
+    </script>
+</body>
+
+</html>

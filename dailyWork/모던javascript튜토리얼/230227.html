@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 접근</title>
+</head>
+
+<body>
+    <table id="table">
+        aaa
+        <tr>
+            <td>1:1</td>
+            <td>1:2</td>
+            <td>1:3</td>
+            <td>1:4</td>
+            <td>1:5</td>
+        </tr>
+        <tr>
+            <td>2:1</td>
+            <td>2:2</td>
+            <td>2:3</td>
+            <td>2:4</td>
+            <td>2:5</td>
+        </tr>
+        <tr>
+            <td>3:1</td>
+            <td>3:2</td>
+            <td>3:3</td>
+            <td>3:4</td>
+            <td>3:5</td>
+        </tr>
+        <tr>
+            <td>4:1</td>
+            <td>4:2</td>
+            <td>4:3</td>
+            <td>4:4</td>
+            <td>4:5</td>
+        </tr>
+        <tr>
+            <td>5:1</td>
+            <td>5:2</td>
+            <td>5:3</td>
+            <td>5:4</td>
+            <td>5:5</td>
+        </tr>
+    </table>
+    <div hidden id="elem"> 안녕하세요 만나서 반갑지 않습니다. 왜냐면 저는 안보이니까요.</div>
+    <ul id="user">
+        <li>John
+            <ul>
+                <li>머야 또 안에 있어?</li>
+                <li>머야 또 안에 있어?</li>
+                <li>머야 또 안에 있어?</li>
+                <li>머야 또 안에 있어?</li>
+            </ul>
+        </li>
+        <li>Pete</li>
+    </ul>
+    <div show-info="name"></div>
+    <div show-info="age"></div>
+    <div id="order" class="order" data-order-state="new">
+        A new order.
+    </div>
+    <div data-widget-name="menu">Choose the genre</div>
+    <ul>
+        <li><a class="out_link" href="http://google.com">http://google.com</a></li>
+        <li><a class="out_link" href="/tutorial">/tutorial.html</a></li>
+        <li><a class="out_link" href="local/path">local/path</a></li>
+        <li><a class="out_link" href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+        <li><a class="out_link" href="http://nodejs.org">http://nodejs.org</a></li>
+        <li><a class="out_link" href="http://internal.com/test">http://internal.com/test</a></li>
+    </ul>
+    <div id="example"></div>
+    <ul id="ul"></ul>
+    <ol id="elemList">
+        <li>Hello</li>
+        <li>World</li>
+    </ol>
+    <div id="container"></div>
+    <script>
+        let table = document.body.firstElementChild;
+
+        for (let i = 0; i < table.rows.length; i++) {
+            console.log(i);
+            let row = table.rows[i];
+            console.log(row.cells[i])
+            row.cells[i].style.background = "red";
+        }
+        let tableRemoveTag = document.querySelector("#table");
+        // tableRemoveTag.remove();
+        /*
+            // 1번  `id="age-table"`인 테이블
+                let ageTable = document.getElementById("age-table");
+            // 2번 테이블 내의 `label` 요소 모두
+                ageTable.getElementsByTagName('label');
+                document.querySelectorAll("#age-table label");
+            // 3번 테이블 내의 첫 번째 `td`(Age가 적힌 곳)
+                table.row[0].cells[0];
+                table.getElementsByTagName('td')[0];
+                table.querySelector('td');
+            // 4번 `name="search"`인 `form`
+                let formMake = document.getElementsByName("search")[0];
+                document.querySelector('form[name="search"]')
+            // 5번 폼의 첫 번째 `input`
+                formMake.getElementsByTagName('input')[0];
+                formMake.querySelector('input');
+            // 6번 폼의 마지막 `input`
+                let input = formMake.querySelectorAll('input');
+                input[input.length - 1];
+        */
+
+        // console.log(document.body); //DOM 트리 출력
+        // console.dir(document.body); //DOM 객체 출력
+
+        // document.body.innerHTML += "<div>안녕하세요? </div>";
+        // document.body.innerHTML = "반갑습니당"
+
+        // setInterval(() => elem.hidden = !elem.hidden, 1000);
+
+        // let user = document.getElementById("user").children;
+        // for(let j =0; j < user.length; j++){
+        //     console.log(user[j].textContent , user.length)
+        // }
+
+        // for( let li of document.querySelectorAll('li')){
+        //     let title = li.firstChild.data;
+
+        //     title = title.trim();
+
+        //     let count = li.getElementsByClassName('li').length;
+        //     alert(title + ':' + count)
+        // }
+        // alert(document);
+        let user = {
+            name: "Pege",
+            age: 26,
+        }
+
+        for (let div of document.querySelectorAll("[show-info]")) {
+            let field = div.getAttribute('show-info');
+            console.log(div, field, user[field]);
+            div.innerHTML = user[field]
+        }
+
+        console.log(order.dataset.orderState);
+        order.dataset.orderState = "cancled";
+        console.log(order.dataset.orderState);
+
+        let attr = document.querySelector("[data-widget-name]")
+        console.log(attr.dataset.widgetName, attr.getAttribute("data-widget-name"));
+
+        let link = document.querySelectorAll('.out_link');
+        // for (links in link) {
+        //     console.log(links)
+        // }
+        link.forEach((item, index) => {
+            // let search = item.indexOf('://');
+            console.log(item.href)
+            let attrLink = item.getAttribute('href');
+            if (attrLink.indexOf("://") > -1) {
+                item.style.color = 'orange';
+
+            }
+            if (item.href.indexOf("http://internal.com") > -1) {
+                item.style.color = 'black';
+            }
+        })
+
+        let selector = 'a[href*="://"]:not([href^="http://internal.com"])';
+        let links = document.querySelectorAll(selector);
+
+        links.forEach(element => {
+            element.style.color = "orange";
+        });
+
+        let createDiv = document.createElement('div');
+        createDiv.className = 'alert';
+        createDiv.innerHTML = "안녕하세요? 만나서 반갑습니다.";
+        document.body.append(createDiv);
+
+        const example = document.querySelector("#example");
+        // example.before("<p>안녕하세요.</p>", document.createElement('hr'))
+        example.insertAdjacentHTML('beforebegin', '<p>안녕하세요</p>');
+        example.insertAdjacentHTML('afterend', '<strong>안녕하세요</strong>');
+
+
+        function getListContent() {
+            let fragment = new DocumentFragment();
+            for (let i = 1; i <= 3; i++) {
+                let li = document.createElement('li');
+                li.append(i);
+                fragment.append(li)
+            }
+            return fragment
+        }
+        ul.append(getListContent());
+
+
+        let elems = document.querySelector("#elemList");
+
+        function clear(elems) {
+            while (elems.firstChild) {
+                elems.firstChild.remove()
+            }
+        }
+        clear(elems)
+
+
+        // let makeUl = document.createElement('ul');
+        // document.body.append(makeUl);
+        // while (true) {
+        //     let userValue = prompt("리스트 요소를 적어주세요");
+        //     if (!userValue) {
+        //         break;
+        //     }
+        //     let makeLi = document.createElement('li');
+        //     makeLi.textContent = userValue;
+        //     makeUl.append(makeLi);
+        // }
+
+        let data = {
+            "Fish": {
+                "trout": {},
+                "salmon": {}
+            },
+
+            "Tree": {
+                "Huge": {
+                    "sequoia": {},
+                    "oak": {}
+                },
+                "Flowering": {
+                    "apple tree": {},
+                    "magnolia": {}
+                }
+            }
+        };
+
+        function createTree(container, obj) {
+            container.innerHTML = createTreeText(obj);
+        }
+        function createTreeText(obj) {
+            let li = '';
+            let ul;
+            for (let key in obj) {
+                console.log(key);
+                li += '<li>' + key + createTreeText(obj[key]) + '</li>'
+            }
+            if (li) {
+                ul = '<ul>' + li + '</ul>';
+            }
+            return ul || '';
+        }
+        createTree(container, data);
+
+    </script>
+</body>
+
+</html>
