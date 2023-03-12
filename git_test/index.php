@@ -8,5 +8,6 @@
 </head>
 <body>
     오늘의 git 수업 완
+    수정도 완
 </body>
 </html>
