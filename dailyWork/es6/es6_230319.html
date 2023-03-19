@@ -168,6 +168,37 @@
 
         // 부모.prototype == 자식.__proto__
 
+
+        // es5 이상
+        let parent = { name: 'jeong', age: 26 };
+
+        let children = Object.create(parent); // prototype을 parent로 해주삼
+        let grandsom = Object.create(children); // 손자까지 가능
+
+        // es6 이상
+        class p2 {
+            constructor(name) {
+                this.name = name;
+                //여기 함수 생성할 시 자식들이 직접 함수 가짐
+                // this.sayHi = function () {
+                //     console.log('hello')
+                // };
+            }
+            // 여기 함수 생성할 시 자식 오브젝트에 추가 X
+            // 부모 prototype에 추가됨
+            sayHi = function () {
+                console.log('hello')
+            };
+            // sayHello() {
+            //     console.log('hello2')
+            // }
+        }
+        //함수 추가 
+        p2.prototype.sayHello = function () {
+            console.log('hello2')
+        }
+        let c22 = new p2('Jeong');
+        // c22.__proto__ == p2.prototype == Object.getPrototypeOf(c22); //부모의 prototype 알려졍
     </script>
 </body>
 
