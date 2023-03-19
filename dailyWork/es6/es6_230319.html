@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6_230319</title>
+</head>
+
+<body>
+    <script>
+        // function plus(a, b = 10) { // b = 10 default값
+        //     console.log(a + b)
+        // }
+        // plus(1);
+
+        function 함수(a, b, c) {
+            for (let i = 0; i < arguments.length; i++) {
+                // console.log(arguments[i])
+            }
+        }
+        함수(1, 2, 3, 5, 8);
+
+        function 함수2Exam(a, b, ...rest) {
+            // 함수 파라미터 자리에 ...붙으면 rest (arguments 를 배열로) 
+            // 가장 뒤에 써야함 + 두번 이상 금지
+            // 나머지는 spread
+            console.log(rest);
+        }
+        function 함수2(...rest) {
+            rest.forEach((item) => {
+                console.log(item)
+            })
+        }
+        함수2(1, 2, 3, 4, 6, 8, 7)
+
+
+        const a = [1, 2, 3];
+        const b = '김밥';
+        const c = [...b, ...a];
+
+        console.log(c) //'김', '밥' , 1, 2, 3; // 문자 []없기에 각각 해체됨! 
+
+        const a2 = [1, 2, 3];
+        const b2 = ['you', 'are'];
+        const c2 = function (a2, b2) {
+            console.log([[...a2], ...[...b2]][1])
+            // [1, 2, 3] , 'you', 'are'
+        }
+        c2(a2, b2);
+
+        function f1(a = 5, b = a * 2) { // a = 3, b = 6
+            console.log(a + b);
+            return 10
+        }
+        f1(3)
+
+        function f2(a = 5, b = a * 2) {
+            console.log(a + b);
+        }
+        f2(undefined, undefined); // 정의안된 파라미터
+
+        function array1(...rest) {
+            return rest;
+        }
+        let newArray = array1(1, 2, 3, 4, 5);
+        console.log(newArray);
+
+        let numbers = [2, 3, 4, 5, 6, 1, 3, 2, 5, 5, 4, 6, 7];
+
+        console.log(Math.max(...numbers));
+
+        function f3(rest) {
+            // let spreadRest = ;
+            return console.log(...[...rest].sort());
+        }
+        f3('bear')
+
+        function f4(nums) {
+            let result = {};
+            [...nums].forEach(function (item) {
+                if (result[item] > 0) {
+                    result[item] = result[item] + 1;
+                    console.log(result[item])
+                } else {
+                    result[item] = 1
+                }
+            });
+
+            console.log(result)
+        }
+        f4('aacbbb');
+
+        function f5(alp) {
+            let result = {};
+            [...alp].forEach(function (item) {
+                if (result[item] > 0) {
+                    result[item] = result[item] + 1
+                } else {
+                    result[item] = 1
+                }
+            })
+            console.log(result)
+        }
+        f5('aacsdffdeeeeddxvbbb');
+
+        // 변수에 레퍼런스가 저장됨 [1,2,3] 이 저쪽에(화살표) 있어요
+        // 변수 복사하듯이 복사하고 복사 원본을 바꾸면 같이 바뀜
+        // pc메모리 < 변수 자체는 어디있는지 알려주는 용도
+        let array2 = [1, 2, 3];
+        let array3 = array2 // 화살표를 복사 같은 메모리를 사용중
+        let array4 = [1, 2, 3];
+        // false 
+        array2 == array4 // 화살표 1 == 화살표 2 
+        let obj = { name: 'jeong' };
+
+
+        // constructor,생성자 비슷한 object 를 쉽게 찍어낼 수 있는 
+        // 일반함수랑 다르다고 대문자로 적음
+        function Student(name) {
+            //this == Student 에서 새로생성되는 object(instance)
+            this.name = name;  // this 는 새로생성되는 object 를 뜻함
+            this.age = 15;
+            this.sayHi = function () {
+                console.log(`안녕하세요 ${this.name} 입니다`)
+            };
+        }
+
+        // new Student(); // object 뽑힘
+        let stu1 = new Student('daseul');
+        console.log(stu1);
+
+
+
+        // 부모
+        function Data(name, price) {
+            this.name = name;
+            this.price = price;
+            this.extraCharge = function () {
+                return console.log(this.price * 0.1);
+            }
+            // prototype이라는 공간이 생김 
+            // 함수에만 생김 하찮은 변수 arr 에는 생기지않음
+            // prototype == 유전자
+        }
+        Data.prototype.gender = '남';
+
+        // Data 에 상속받음
+        // 자식
+        let product1 = new Data('shirts', 50000);
+        let product2 = new Data('pants', 60000);
+        console.log(product1, product1.extraCharge());
+        console.log(product2, product2.extraCharge());
+
+
+
+        Array.prototype.remove3 = function () {
+            for (let i = 0; i < this.length; i++) {
+                if (this[i] == 3) {
+                    this.splice(i, 1)
+                }
+            }
+        }
+        let array5 = [1, 2, 3];
+        array5.remove3();
+        console.log(array5)
+
+        // 부모.prototype == 자식.__proto__
+
+    </script>
+</body>
+
+</html>
