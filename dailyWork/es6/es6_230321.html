@@ -38,13 +38,16 @@
         });
 
         promise02.then(function (result) {
-            console.log(result)
-        }).then(function () {
+            console.log(result);
             let promise03 = new Promise(function (resolve, reject) {
                 $.get('https://codingapple1.github.io/hello2.txt').done(function (result02) {
                     resolve(result02)
                 });
             });
+
+            return promise03;
+        }).then(function () {
+
             // }).catch(function () {
             promise03.then(function (result02) {
                 console.log(result02)
