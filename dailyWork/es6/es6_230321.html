@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <img id="test" src="https://codingapple1.github.io/kona.jpg">
+    <script>
+
+        const img = document.getElementById("test");
+        let imgTest = new Promise(function (resolve, reject) {
+            img.addEventListener("load", function () {
+                resolve();
+            })
+            img.addEventListener('error', function () {
+                reject();
+            });
+        })
+
+        imgTest.then(function () {
+            console.log('이미지 출력 성공')
+        }).catch(function () {
+            console.log('이미지 출력 실패')
+        })
+
+
+
+        let promise02 = new Promise(function (resolve, reject) {
+            $.get('https://codingapple1.github.io/hello.txt').done(function (result) {
+                resolve(result)
+            });
+        });
+
+        promise02.then(function (result) {
+            console.log(result);
+            let promise03 = new Promise(function (resolve, reject) {
+                $.get('https://codingapple1.github.io/hello2.txt').done(function (result02) {
+                    resolve(result02)
+                });
+            });
+
+            return promise03;
+        }).then(function () {
+
+            // }).catch(function () {
+            promise03.then(function (result02) {
+                console.log(result02)
+            })
+        })
+
+        function first(second) {
+            console.log(1)
+            second();
+        }
+        function second() {
+            console.log(2)
+        }
+        //first 함수 실행 후 second 실행
+        first(second);
+        //콜백함수의 문제점 인지 어려움  > 더 쉽게 쓰기 위한  promise패턴
+        /*
+            first( function(){
+                second(function(){
+                    third(function(){
+
+                    })
+                })
+            })
+            ==
+            first().then(function(){
+
+            }).then(function(){
+
+            }).then(function(){
+
+            })
+        */
+        // promise00가 성공일 경우 실행할 코드
+        let promise00 = new Promise(function (resolve, reject) {
+            // resolve(); // --> then 실행
+            // reject(); // --> catch 실행
+            // resolved / pending / rejected
+            // 10초이상 오래걸리는 걸 실행시 아래가 멈춘상태이므로 비동기로 바꿔주는 매직이아님
+            setTimeout(function () {
+                resolve();
+            }, 1000)
+        }); //성공 / 실패 판정 기계
+        promise00.then(function () {
+            console.log('성공')
+        }).catch(function () { //실패할 경우에도 코드실행 가능 
+            console.log('실패')
+        })
+    </script>
+</body>
+
+</html>

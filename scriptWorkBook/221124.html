@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>221124CODEFESTIVAL</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="wrap_question">
+        <div class="inner">
+            <!-- 1 -->
+            <div class="question">
+                <p class="q_txt">1. 다음 배열에서 400, 500을 삭제하는 code를 입력하세요.</p>
+                <script>
+                    var nums = [100, 200, 300, 400, 500];
+                    nums.splice(3);
+                    document.write(`<p class='a_txt'> 답&nbsp; ${nums} </p>`);
+                </script>
+            </div>
+            <!-- 2 -->
+            <div class="question">
+                <p class="q_txt">2. pass 부분에 배열 내장함수를 이용하여 코드를 입력하고 다음과 같이 출력되게 하세요.</p>
+                <script>
+                    var arr = [200, 100, 300];
+                    arr.splice(2, 0, "10000"); //시작부분, 시작부분에 들어갈 값 뒤부터 삭제할 값, "들어갈 값"
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; ${arr} </p><br><strong>*시작부분, 시작부분에 들어갈 값 뒤부터 삭제할 값, '들어갈 값'</strong>`
+                    );
+                </script>
+            </div>
+            <!-- 3 -->
+            <div class="question">
+                <p class="q_txt">3. 다음 출력 값으로 올바른 것은?</p>
+                <script>
+                    var arr = [100, 200, 300];
+                    console.log(typeof arr);
+
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; 3 </p><br><strong>*객체가 정답  자바스크립트에서는 배열의 타입을 별도로 제공하지 않음. 배열 == 객체</strong>`
+                    );
+                </script>
+            </div>
+            <!-- 4 -->
+            <div class="question">
+                <p class="q_txt">4. 다음 변수 a를 type(a)로 넣었을 때 출력될 값과의 연결이 알맞지 않은 것?</p>
+                <script>
+                    var a = 1,
+                        b = 2.22,
+                        c = "p",
+                        d = [1, 2, 3];
+                    var aTrue = typeof a,
+                        bTrue = typeof b,
+                        cTrue = typeof c,
+                        dTrue = typeof d;
+                    console.log(aTrue, bTrue, cTrue, dTrue);
+                    document.write(`<p class='a_txt'> 답&nbsp; 2 </p>`);
+                </script>
+            </div>
+            <!-- 5 -->
+            <div class="question">
+                <p class="q_txt">5. 다음 코드의 출력 값으로 알맞은 것은?</p>
+                <script>
+                    var a = 10,
+                        b = 2;
+                    for (var i = 1; i < 5; i += 2) {
+                        a += i;
+                    }
+                    console.log(a + b);
+
+                    document.write(`<p class='a_txt'> 답&nbsp; 4 </p>`);
+                </script>
+            </div>
+            <!-- 6 -->
+            <div class="question">
+                <p class="q_txt">6. false로 취급하지 않는 것이 하나 있다. true를 찾아주세요</p>
+                <script>
+                    console.log(Boolean(NaN), Boolean(1), Boolean(""), Boolean(0), Boolean(undefined));
+                    document.write(`<p class='a_txt'> 답&nbsp;2</p>`);
+                </script>
+            </div>
+            <!-- 7 -->
+            <div class="question">
+                <p class="q_txt">7. 다음 중 변수명으로 사용할 수 없는 것 2개</p>
+                <script>
+                    document.write(`<p class='a_txt'> 답&nbsp; 3: let / 5: 1age </p>`);
+                </script>
+            </div>
+            <!-- 8 -->
+            <div class="question">
+                <p class="q_txt">8. 객체를 다음과 같이 만들었다. 출력값을 입력하시오 (출력값에는 공백 X)</p>
+                <script>
+                    var d = {
+                        height: 180,
+                        weight: 78,
+                        weight: 84,
+                        temperature: 36,
+                        eyesight: 1,
+                    };
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; ${d["weight"]}  , 84  </p><br><strong>*키가 중복되었을 경우, 마지막 키의 값을 가져옴</strong>`
+                    );
+                </script>
+            </div>
+            <!-- 9 -->
+            <div class="question">
+                <p class="q_txt">9. 다음 소스 코드를 완성하여 날짜와 시간을 출력하시오.</p>
+                <script>
+                    var year = "2019",
+                        month = "04",
+                        day = "26",
+                        hour = "11",
+                        minute = "34",
+                        second = "27";
+                    var result = year.concat("/" + month + "/" + day + " " + hour + ":" + minute + ":" +
+                        second); // 2019/04/26 11:34:27
+
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; ${result} </p><br><strong>*concat 은 두 개의 문자열을 하나의 문자열로 만들어주는 역할을 하는 함수 입력값을 문자열 대신 배열을 사용하면 두 개의 배열을 하나의 배열로 만들어주는 역할 함수</strong>`
+                    );
+                </script>
+            </div>
+            <!-- 10 -->
+            <div class="question">
+                <p class="q_txt">10. 크리스마스 별 찍기</p>
+                <script>
+                    // var q = prompt("숫자를 입력하세요");
+                    var q = 5;
+                    for (var i = 1; i <= q; i++) {
+                        var star = " ";
+                        for (var z = 0; z < q - i; z++) {
+                            star += " ";
+                        }
+                        for (var a = 0; a < 2 * i - 1; a++) {
+                            star += "*";
+                        }
+                        console.log(star);
+                        document.write(`<p class='a_txt'> 답&nbsp; ${star} </p>`);
+                    }
+                </script>
+            </div>
+            <!-- 11 -->
+            <div class="question">
+                <p class="q_txt">11. 1부터 100까지 모두 더하는 code 완성</p>
+                <script>
+                    let s = 0;
+                    for (i = 1; i <= 100; i++) {
+                        s += i;
+                    }
+                    document.write(`<p class='a_txt'> 답&nbsp; ${s} </p>`);
+                </script>
+            </div>
+            <!-- 12 -->
+            <div class="question">
+                <p class="q_txt">12. 클래스를 작성하여 게임 캐릭터의 능력치와 '파이어볼'이 출력되게 만드시오. 주어진 소스코드 수정 X</p>
+                <script>
+                    class Wizard {
+                        constructor(health, mana, armor) {
+                            this.health = health;
+                            this.mana = mana;
+                            this.armor = armor;
+                        }
+                        attack() {
+                            console.log('파이어볼')
+                        }
+                    }
+                    const x = new Wizard(545, 210, 10);
+                    console.log(x.health, x.mana, x.armor);
+                    x.attack();
+                    document.write(`<p class='a_txt'> 답&nbsp; 콘솔행 <br></p>`);
+                </script>
+            </div>
+            <!-- 13 -->
+            <div class="question">
+                <p class="q_txt">13. 몇 번째 행성인가요?</p>
+                <script>
+                    var planet = ["수성", "금성", "지구", "화성", "목성", "토성", "천왕성", "해왕성"];
+                    // planet.index();
+                    //var n = prompt("숫자를 입력하세요.");
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리</p>`);
+                </script>
+            </div>
+            <!-- 14 -->
+            <div class="question">
+                <p class="q_txt">14. 3의 배수인가요?</p>
+                <script>
+                    var planet = ["수성", "금성", "지구", "화성", "목성", "토성", "천왕성", "해왕성"];
+                    // planet.index();
+                    // var n = prompt("숫자를 입력하세요.");
+                    // if (n % 3 == 0) {
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p>`);
+                    // } else {
+                    //     document.write("<p class='a_txt'>" + n + "</p>");
+                    // }
+                </script>
+            </div>
+            <!-- 15 -->
+            <div class="question">
+                <p class="q_txt">15. 자기소개</p>
+                <script>
+                    // var information = prompt("이름을 적어주세요.");
+                    //if (information == "김다정") {
+                    document.write(`<p class='a_txt'> 안녕하세요. 저는 / 주석 처리 /입니다.</p>`);
+                    //}
+                </script>
+            </div>
+            <!-- 16 -->
+            <div class="question">
+                <p class="q_txt">16. 로꾸거</p>
+                <script>
+                    //var roquaqe = prompt("거꾸로를 입력하면 로꾸거가 출력됩니다.");
+                    //var change = roquaqe.split("").reverse().join("");
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; 주석 처리</p><br><strong>*.join('')을 붙여야지 로,꾸,꺼 로 나오던게 로꾸꺼로 나옴 *마지막으로 join('')은 배열의 요소들을 하나의 문자열로 합칩니다. </strong>`
+                    );
+                </script>
+            </div>
+            <!-- 17 -->
+            <div class="question">
+                <p class="q_txt">17. 놀이기구 키 제한</p>
+                <script>
+                    // var q = prompt("키가 몇입니까?");
+                    // if (q >= 150) {
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리</p>`);
+                    // } else {
+                    //     document.write("<p class='a_txt'> 답&nbsp;No</p>");
+                    // }
+                </script>
+            </div>
+            <!-- 18 -->
+            <div class="question">
+                <p class="q_txt">18. 평균 점수</p>
+                <script>
+                    // var scores = prompt("세 과목의 점수를 입력하세요.").split(" ");
+                    // let sum = 0;
+                    // for (let i = 0; i < 3; i++) {
+                    //     sum += parseInt(scores[i]);
+                    // }
+                    let resultNum = 90 /*sum*/ / 3;
+                    document.write(`<p class='a_txt'> 답&nbsp; ${Math.floor(resultNum)} </p>`);
+                </script>
+            </div>
+            <!-- 19 -->
+            <div class="question">
+                <p class="q_txt">19. 제곱을 구하자</p>
+                <script>
+                    // const twoNums = prompt("2개의 숫자를 입력해주세요").split("");
+                    // console.log(twoNums)
+                    // const twoNumsA = parseInt(twoNums[0]);
+                    // const twoNumsB = parseInt(twoNums[1]);
+                    // let answer = Math.pow(twoNumsA, twoNumsB)
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p>`);
+                </script>
+            </div>
+            <!-- 20 -->
+            <div class="question">
+                <p class="q_txt">20. 몫과 나머지</p>
+                <script>
+                    function calc(a, b) {
+                        let take = parseInt(a / b);
+                        let remainder = a % b;
+                        console.log(take, remainder);
+                    }
+                    calc(10, 5);
+                    calc(100, 8);
+                    calc(865, 6);
+
+                    // const n = prompt("두개의 값").split("");
+                    // const nA = Math.floor(parseInt(n[0], 10) / parseInt(n[1], 10));
+                    // const nB = parseInt(n[0], 10) % parseInt(n[1], 10)
+                    // console.log(nA, nB);
+                    document.write(`<p class='a_txt'> 답&nbsp; 콘솔행 </p>`);
+                </script>
+            </div>
+            <!-- 21 -->
+            <div class="question">
+                <p class="q_txt">21. set은 어떻게 만드나요?</p>
+                <script>
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; 3,5 </p><br><strong>*set이란, 중복되지 않는 데이터를 저장하는 데이터 구조입니다. set 객체 안에 있는 데이터는 중복을 허용하지 않습니다. </strong>`
+                    );
+                </script>
+            </div>
+            <!-- 22 -->
+            <div class="question">
+                <p class="q_txt">22. 배수인지 확인하기</p>
+                <script>
+                    document.write(`<p class='a_txt'> 답&nbsp; 2 i%6 == 0 </p>`);
+                </script>
+            </div>
+            <!-- 23 -->
+            <div class="question">
+                <p class="q_txt">23. OX문제</p>
+                <script>
+                    document.write(
+                        `<p class='a_txt'> 답&nbsp; X 3.33333333 </p><br><strong>*정수를 출력하고자 할 때 Math.floor()</strong>`
+                    );
+                </script>
+            </div>
+            <!-- 24 -->
+            <div class="question">
+                <p class="q_txt">24. 대문자로 바꿔주세요!</p>
+                <script>
+                    // function upperChange(name) {
+                    //     let change = name.toUpperCase();
+                    //     return document.write(`<p class='a_txt'> 답&nbsp; ${change}</p><br>`);
+                    // }
+                    // upperChange(prompt("영문 이름을 입력해주세요"));
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리</p><br>`);
+                </script>
+            </div>
+            <!-- 25 -->
+            <div class="question">
+                <p class="q_txt">25. 원의 넓이를 구하세요</p>
+                <script>
+                    //반지름의 길이 X 반지름의 길이 X 3.14
+                    function makeRadius(length) {
+                        let sum = Math.floor((length * length) * 3.14);
+                        return document.write(`<p class='a_txt'> 답&nbsp; ${sum} </p><br>`);
+                    }
+                    makeRadius(2)
+                </script>
+            </div>
+            <!-- 26 -->
+            <div class="question">
+                <p class="q_txt">26. 행성 문제2</p>
+                <script>
+                    // const planet2Q = prompt("행성 이름을 적어주세요.");
+                    // const planet2 = {
+                    //     수성: "Mercury",
+                    //     금성: "Venus",
+                    //     지구: "Earth",
+                    //     화성: "Mars",
+                    //     목성: "Jupiter",
+                    //     토성: "Saturn",
+                    //     천왕성: "Uranus",
+                    //     해왕성: "Neptune"
+                    // }
+                    // alert(planet2[planet2Q]);
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 27 -->
+            <div class="question">
+                <p class="q_txt">27. 객체 만들기</p>
+                <script>
+                    // function User(name, math) {
+                    //     this.name = name;
+                    //     this.math = math;
+                    // }
+                    // const name = prompt("이름은?").split(" ");
+                    // const number = prompt("점수는?수학").split(" ");
+                    // let answer = {};
+                    // for (let i = 0; i < name.length; i++) {
+                    //     answer[name[i]] = parseInt(number[i], 10);
+                    // }
+                    // console.log(answer);
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 28 -->
+            <div class="question">
+                <p class="q_txt">28. 2-gram</p>
+                <script>
+                    // const str = prompt("문자를 입력해주세요");
+                    // const strArr = [...str];
+                    // for (let i = 0; i < strArr.length - 1; i++) {
+                    //     console.log(strArr.slice(i, i + 2));
+                    // }
+
+                    document.write(`<p class='a_txt9'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 29 -->
+            <div class="question">
+                <p class="q_txt">29. 대문자만 지나가세요</p>
+                <script>
+                    // const qSpell = prompt("알파벳 하나 부탁 ^^");
+                    // function isUpper(str) {
+                    //     if (str === str.toUpperCase()) {
+                    //         return console.log(true);
+                    //     } else {
+                    //         return false;
+                    //     }
+                    // }
+                    // isUpper(qSpell);
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 30 -->
+            <div class="question">
+                <p class="q_txt">30. 문자열 속 문자 찾기</p>
+                <script>
+                    // const word = prompt("문자열을 입력하세요", "pineapple is yummy");
+                    // const searchWord = prompt("찾을 문자를 입력하세요");
+                    // let wordIndex = word.indexOf(searchWord)
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 31 -->
+            <div class="question">
+                <p class="q_txt">31. 자바스크립트 자료형의 복잡도</p>
+                <script>
+                    document.write(`<p class='a_txt'> 답&nbsp; 3,5 </p><br>`);
+                </script>
+            </div>
+            <!-- 32 -->
+            <div class="question">
+                <p class="q_txt">32. 문자열 만들기</p>
+                <script>
+                    const sentence = "안녕하세요 저는 정다슬입니다. 저는 관광과를 나왔는데, 웹퍼블리셔가 되었네용?!"
+                    // const sentence = prompt("자기소개서를 넣어주세요");
+                    let sentenceSplit = sentence.split(" ");
+                    let sentenceLength = sentenceSplit.length
+                    document.write(`<p class='a_txt'> 답&nbsp; ${sentenceLength} </p><br>`);
+                </script>
+            </div>
+            <!-- 33 -->
+            <div class="question">
+                <p class="q_txt">33. 거꾸로 출력하기</p>
+                <script>
+                    // let numSplit = prompt("숫자를 띄어서 입력해주세요").split(" ").reverse();
+                    // let storage = [];
+                    // storage.push(numSplit)
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 34 -->
+            <div class="question">
+                <p class="q_txt">34. sort 구현하기</p>
+                <script>
+                    // let numHeight = prompt("키를 띄어서 입력해주세요").split(" ");
+                    // function height(numHeight){
+                    //     for(let i = 0; i<numHeight.length; i++){
+                    //         if(numHeight[i] > numHeight[i+1]){
+                    //             return "No";
+                    //         }else{
+                    //             return "Yes";
+                    //         }
+                    //     }
+                    // }
+                    document.write(`<p class='a_txt'> 답&nbsp;  </p><br>`);
+                </script>
+            </div>
+            <!-- 35 -->
+            <div class="question">
+                <p class="q_txt">35. Factory 함수 사용하기</p>
+                <script>
+                    function one(n) {
+                        function two(m) {
+                            return Math.pow(m, n);
+
+                        }
+                        return two;
+                    }
+                    const oneA = one(2);
+                    const oneB = one(3);
+                    const oneC = one(4);
+                    document.write(`<p class='a_txt'> 답&nbsp; ${oneA(10)}, ${oneB(10)}, ${oneC(10)} </p><br>`);
+                </script>
+            </div>
+            <!-- 36 -->
+            <div class="question">
+                <p class="q_txt">36. 구구단 출력하기</p>
+                <script>
+                    // const gugudan = prompt("몇 단을 실행할까요?");
+                    const gugudan = 5;
+                    let num = "";
+                    for (i = 1; i <= 9; i++) {
+                        num += gugudan * i + " ";
+                    }
+                    document.write(`<p class='a_txt'> 답&nbsp; ${num} </p><br>`);
+                </script>
+            </div>
+            <!-- 37 -->
+            <div class="question">
+                <p class="q_txt">37. 반장 선거</p>
+                <script>
+                    // const cm = prompt("선거 이름을 띄어쓰기로 적어주세요").split(" ");
+                    // let arrCm = {};
+                    // let winner = "";
+
+                    // for(let index in cm){
+                    //     let val = cm[index];
+                    //     // console.log(val); //cm값
+                    //     // console.log(arrCm[val]);//undefined
+                    //     arrCm[val] = arrCm[val] === undefined ? 1 : arrCm[val] = arrCm[val] + 1;
+                    //     console.log(arrCm[val]);
+                    // }
+                    // winner = Object.keys(arrCm).reduce( function(a,b){
+                    //     return arrCm[a] > arrCm[b] ? a : b
+                    // })
+
+                    // document.write(`${winner}(이) 가 ${arrCm[winner]}표로 반장임.`);
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+            </div>
+            <!-- 38 -->
+            <div class="question">
+                <p class="q_txt">38. 호준이의 아르바이트</p>
+                <script>
+                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                </script>
+
+
+            </div>
+        </div>
+        <!-- 
+                <div class="question">
+                    <p class="q_txt"></p>
+                    <script>
+                        document.write(`<p class='a_txt'> 답&nbsp;</p>`);
+                    </script>
+                </div>
+            -->
+    </div>
+</body>
+
+</html>

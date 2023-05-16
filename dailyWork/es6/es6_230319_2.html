@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6_230319_2</title>
+</head>
+
+<body>
+    <script>
+        class gp {
+            /*super() 부분 시작*/
+            constructor(name) {
+                this.first = 'Jeong';
+                this.name = name;
+            }
+            /*super() 부분 끝*/
+            sayHi() {
+                console.log('안녕 저는 1입니다.');
+            }
+        }
+        // let c1 = new gp('daseul');
+
+        // 유사한 class gp 속성들 그대로 물려받아서 만들고 싶을 때
+        class pp extends gp {
+            constructor(name) {
+                // extends 한 거 this 함부로 못씀
+                super(name); //super() 다음에 this 써야함
+                this.hobby = 'golf'
+                this.age = 26;
+            }
+            sayHi() {
+                console.log('안녕 저는 2입니다.');
+                super.sayHi(); // constructor밖에서 부모 prototype을 의미
+            }
+        }
+        let p1 = new pp('dabin');
+
+        let person = {
+            name: "daseul",
+            age: 26,
+            /* 함수를 만들어 object 데이터를 다루는 이유
+                1. object 자료가 복잡할 때
+                2. object 자료 수정시 편리 / 데이터를 실수로 문자열을 작성시 차단
+                3. 관리가 편함
+            */
+            get nextAge() { // get 데이터 꺼내씀 get 함수들 return 필수!! 파라미터 입력 X
+                return this.age + 1
+            },
+            set changeAge(age) { // set 데이터 변경 set함수들 파라미터 1개 있어야함
+                this.age = parseInt(age);
+            }
+        }
+
+        // person.nextAge();
+        person.changeAge = 20; //소괄호 빼기 위해서 object function앞에 set 설정
+        person.nextAge;
+
+        class person02 {
+            constructor() {
+                this.name = 'Jeong';
+                this.age = 26;
+            }
+            get nextAge() {
+                return this.age + 1
+            }
+            set changeAge(age) {
+                this.age = age;
+            }
+        }
+        let pesron11 = new person02();
+
+
+        class Dogs {
+            constructor(type, color) {
+                this.type = type;
+                this.color = color;
+            }
+            한살먹기() {
+                if (this instanceof Cats) {
+                    // a instanceof b == a가 b로부터 생성된 오브젝트인지 아닌지를
+                    // true, false로 알려주는 연산자
+                    return this.age + 1;
+                }
+            }
+        }
+        let dog1 = new Dogs('말티즈', 'white')
+        let dog2 = new Dogs('진돗개', 'brown')
+
+        console.log(dog1, dog2);
+
+        class Cats extends Dogs {
+            constructor(type, color, age) {
+                super(type, age);
+                this.age = age;
+            }
+        }
+        let cat1 = new Cats('코숏', 'white', 5);
+        let cat2 = new Cats('러시안블루', 'brown', 2);
+        console.log(cat1.한살먹기(), cat2.한살먹기());
+
+        class Unit {
+            constructor(attack, life) {
+                this.attack = attack + 5;
+                this.life = life + 100;
+            }
+            get battlePoint() {
+                return this.attack + this.life;
+            }
+            set changeheal(heal) {
+                this.life = this.life + heal;
+            }
+        }
+
+        let unit1 = new Unit(50, 100);
+        // unit.heal(300)
+        unit1.changeheal = 300;
+
+        let data = {
+            odd: [],
+            even: [],
+            sniffling(...nums) {
+                nums.forEach((item) => {
+                    if (item % 2 == 1) {
+                        this.odd.push(item)
+                    } else {
+                        this.even.push(item)
+                    }
+                })
+            },
+            get sorts() {
+                return [...this.odd, ...this.even].sort()
+            }
+        }
+        data.sniffling(1, 4, 3, 6, 5);
+        console.log(data.sorts);
+
+
+
+        let data2 = {
+            odd: [],
+            even: [],
+            sniffling(...nums) {
+                nums.forEach(item => {
+                    if (item % 2 == 1) {
+                        this.odd.push(item)
+                    } else {
+                        this.even.push(item)
+                    }
+                })
+            },
+            get sorts() {
+                return [...this.odd, ...this.even].sort(function (a, b) {
+                    return a - b;
+                });
+            }
+        }
+        data2.sniffling(1, 44, 4, 5, 6);
+        data2.sorts;
+    </script>
+</body>
+
+</html>
