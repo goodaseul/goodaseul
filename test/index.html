@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    <h1 class="title">
+        <span>분양안내</span>
+    </h1>
+
+    <div id="str"></div>
+
+    <section class="on-screen" id="1">
+        <h2 class="wm-text domino-up">
+            <div>분양안내</div>
+        </h2>
+    </section>
+
+    <p class="title main_headline-1-en" style="color: white; --fz:144;" data-split-txt="" data-split-index="1">
+    <div style="">
+        <div style=" overflow: hidden;"><span splited-txt="" style="">S</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">u</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">p</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">e</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">r</span>
+        </div>
+    </div>
+    <div style=" width: 25.5px;"> </div>
+    <div style="">
+        <div style=" overflow: hidden;"><span splited-txt="" style="">H</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">a</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">p</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">p</span>
+        </div>
+        <div style=" overflow: hidden;"><span splited-txt="" style="">y</span>
+        </div>
+    </div>
+    </p>
+
+    <script>
+        //#str
+        var string = "분양안내";
+        var str = string.split("");
+        var el = document.getElementById('str');
+        (function animate() {
+            str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);
+            var running = setTimeout(animate, 200);
+        })();
+
+
+        String.prototype.replaceAll = function (search, replacement) {
+            var target = this;
+            return target.replace(new RegExp(search, 'g'), replacement);
+        };
+
+        jQuery(document).ready(function () {
+
+            jQuery('.wm-text[class*="domino-"] div').each(function (index) {
+                var characters = this.innerHTML.split("");
+                _this = this;
+                newHTML = "";
+                jQuery.each(characters, function (i, el) {
+                    if (el === " ") {
+                        newHTML += '<span style="display:inline;"> </span>';
+                    } else {
+                        newHTML += "<span><span>" + el + "</span></span>";
+                    }
+                    if (i === characters.length - 1) {
+                        _this.innerHTML = newHTML;
+                    }
+                });
+            });
+
+            jQuery('.wm-text[class*="line-"] div').each(function (index) {
+                newHTML = "<div>" + this.innerHTML + "</div>";
+                this.innerHTML = newHTML;
+            });
+
+            // jQuery(this.id).toggleClass("on-screen");
+
+            // var sections = jQuery("section");
+            // setInterval(function () {
+            //   sections.toggleClass("on-screen");
+            // }, 5000);
+
+            // sections.toggleClass("on-screen");
+
+        });
+    </script>
+</body>
+
+</html>

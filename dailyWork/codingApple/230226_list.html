@@ -74,8 +74,8 @@
         function common(items, tag) {
             items.forEach((item, index) => {
                 tag = `<div class="col-sm-4">
-                    <img src="https://via.placeholder.com/600" class="w-100">
-                    <h5>${item.title}</h5>
+                        <img src="https://via.placeholder.com/600" class="w-100">
+                        <h5>${item.title}</h5>
                     <p>가격 : ${item.price}</p>
                 </div> `;
                 document.querySelector('.row').insertAdjacentHTML('beforeend', tag);
@@ -83,6 +83,7 @@
         }
         let counter = 0;
         $('#more').on("click", function () {
+
             counter++;
 
             if (counter == 1) {

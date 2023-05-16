@@ -6,7 +6,8 @@ Author: Richard Clark - http://richclarkdesign.com
 Twitter: @rich_clark
 */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html,
@@ -148,7 +149,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -228,6 +229,7 @@ em {
 a {
   display: block;
 }
+
 a:hover {
   text-decoration: none;
 }
@@ -242,7 +244,8 @@ address {
 
 .btn {
   border-radius: 0;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   display: block;
   text-align: center;
 }
@@ -261,7 +264,7 @@ textarea {
   font-family: inherit;
 }
 
-.check_box input[type=checkbox] {
+.check_box input[type='checkbox'] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -271,14 +274,20 @@ textarea {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
 .check_box input + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   color: #666666;
 }
+
 .check_box input + label::before {
-  content: "";
+  content: '';
   display: block;
   width: 22px;
   height: 22px;
@@ -286,16 +295,20 @@ textarea {
   background: url(/static/images/common/icon_check.png) no-repeat 0 0;
   background-size: contain;
 }
+
 .check_box input + label a::after {
   background-color: #9e9e9e;
 }
+
 .check_box input:checked + label {
   color: #f5a73b;
 }
+
 .check_box input:checked + label::before {
   background-image: url(/static/images/common/icon_check_on.png);
   background-size: contain;
 }
+
 .check_box input:checked + label a::after {
   background-color: #f5a73b;
 }
@@ -309,7 +322,8 @@ textarea {
   left: 0;
   top: 0;
   background: none;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .footer {
