@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* Pretendard-100*/
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 100;
+    src: local(""), url("./Pretendard/Pretendard-Thin.woff2") format("woff2"), url("./Pretendard/Pretendard-Thin.woff") format("woff"), url("./Pretendard/Pretendard-Thin.ttf") format("truetype");
+}
+
+/* Pretendard-300*/
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 300;
+    src: local(""), url("./Pretendard/Pretendard-Light.woff2") format("woff2"), url("./Pretendard/Pretendard-Light.woff") format("woff"), url("./Pretendard/Pretendard-Light.ttf") format("truetype");
+}
+
+/* Pretendard-400*/
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("./Pretendard/Pretendard-Regular.woff2") format("woff2"), url("./Pretendard/Pretendard-Regular.woff") format("woff"), url("./Pretendard/Pretendard-Regular.ttf") format("truetype");
+}
+
+/* Pretendard-500*/
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 500;
+    src: local(""), url("./Pretendard/Pretendard-Medium.woff2") format("woff2"), url("./Pretendard/Pretendard-Medium.woff") format("woff"), url("./Pretendard/Pretendard-Medium.ttf") format("truetype");
+}
+
+/* Pretendard-600*/
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 600;
+    src: local(""), url("./Pretendard/Pretendard-SemiBold.woff2") format("woff2"), url("./Pretendard/Pretendard-SemiBold.woff") format("woff"), url("./Pretendard/Pretendard-SemiBold.ttf") format("truetype");
+}
+
+/* Pretendard-700*/
+@font-face {
+    font-family: "Pretendard";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("./Pretendard/Pretendard-Bold.woff2") format("woff2"), url("./Pretendard/Pretendard-Bold.woff") format("woff"), url("./Pretendard/Pretendard-Bold.ttf") format("truetype");
+}
+
+/* ###### reset ###### */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    /* height: 100%; */
+    /* overflow: hidden; */
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Pretendard", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
+
+sup {
+    vertical-align: top;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    word-break: keep-all;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    word-break: keep-all;
+}
+
+table,
+tr,
+th,
+td {
+    border-collapse: collapse;
+}
+
+/* ###### 공통 클래스 ###### */
+.container {
+    padding: 0 2.929%;
+}
+
+/* ###### 공통 CSS ###### */
+.wrap {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: #f5f8fe;
+    position: relative;
+}
+
+/* 헤더 타이틀 */
+header {
+    width: 100%;
+    height: 13.81%;
+    background: center / cover no-repeat url(./shared/images/02-09-title-bg.png);
+    display: flex;
+    align-items: flex-start;
+}
+
+.title {
+    width: 68.4%;
+    position: relative;
+    top: 3.32vh;
+}
+
+/* 레퍼런스 버튼 */
+.btn-ref {
+    width: 18.8%;
+    height: 12.5%;
+    position: absolute;
+    left: 0vw;
+    bottom: -0.5vh;
+    cursor: pointer;
+    background: center / cover no-repeat url(./shared/images/btn-ref.png);
+    transition: all ease-in-out 0.1s;
+}
+.btn-ref.on {
+    background-image: url(./shared/images/btn-ref-on.png);
+}
+
+.ref {
+    opacity: 0;
+}
+.ref.on {
+    opacity: 1;
+    transition: all ease-in-out 0.3s;
+}
+
+/* 페이지 이동 버튼 : left home right */
+.page-btn-group {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 88.67vh;
+    right: 2.929vw;
+}
+.page-btn-group .btn {
+    width: 4.39vw;
+    height: 5.86vh;
+    cursor: pointer;
+    position: absolute;
+}
+
+.page-btn-group .btn::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.page-btn-group .btn::after {
+    content: "";
+    display: block;
+    width: 10vw;
+    height: 9vh;
+    position: absolute;
+    left: 50%;
+    top: 0.7vh;
+    transform: translateX(-50%);
+}
+
+/* btn-left */
+.page-btn-group .btn-left {
+    right: 14.5vw;
+}
+
+.page-btn-group .btn-left::before {
+    background: center / cover no-repeat url(./shared/images/btn-left.png);
+}
+
+.page-btn-group .btn-left::after {
+    background: center / cover no-repeat url(./shared/images/btn-left-shadow.png);
+}
+
+.page-btn-group .btn-left.dis::before {
+    background: center / cover no-repeat url(./shared/images/btn-left-dis.png);
+}
+
+.page-btn-group .btn-left.dis::after {
+    background: center / cover no-repeat url(./shared/images/btn-left-dis-shadow.png);
+}
+
+/* btn-home */
+.page-btn-group .btn-home {
+    right: 7vw;
+    height: 6.6vh;
+    top: -0.4vh;
+}
+
+.page-btn-group .btn-home::before {
+    background: center / cover no-repeat url(./shared/images/btn-home.png);
+}
+
+.page-btn-group .btn-home:after {
+    background: center / cover no-repeat url(./shared/images/btn-home-shadow.png);
+    top: 0.8vh;
+}
+
+/* btn-right */
+.page-btn-group .btn-right {
+    right: 0.1vw;
+}
+.page-btn-group .btn-right::before {
+    background: center / cover no-repeat url(./shared/images/btn-right.png);
+}
+.page-btn-group .btn-right::after {
+    background: center / cover no-repeat url(./shared/images/btn-right-shadow.png);
+}
+
+.page-btn-group .btn-right.dis::before {
+    background: center / cover no-repeat url(./shared/images/btn-right-dis.png);
+}
+
+.page-btn-group .btn-right.dis::after {
+    background: center / cover no-repeat url(./shared/images/btn-right-dis-shadow.png);
+}

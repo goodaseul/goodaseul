@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./shared/common.css">
+    <link rel="stylesheet" href="./shared/layout.css">
+    <script src="./shared/jquery.js"></script>
+    <script src="./shared/bundle.js"></script>
+    <script src="./shared/veeva-library.js"></script>
+    <script src="./shared/main.js"></script>
+    <script>
+        function movePage(x) {
+            let id = x;
+            let slide_id = "2022-XULTOPHY-" + id + ".zip"
+            com.veeva.clm.gotoSlide(slide_id, "")
+        }
+    </script>
+
+    <title>XULTOPHY</title>
+
+</head>
+
+<body class="page1">
+    <main>
+        <div class="bg">
+            <img src="./shared/images/bg.jpg" alt="">
+            <div class="tit">
+                <p>
+                    집에서 손쉽게 따라하는
+                </p>
+                <p class="em">
+                    파킨슨병 환자<span class="black">를 위한 운동법 안내</span>
+                </p>
+                <!-- <img src="./shared/images/txt_01.png" alt="집에서 손쉽게 따라하는 파킨슨병 환자를 위한 운동법 안내"> -->
+            </div>
+        </div>
+    </main>
+    <!-- <footer>
+        <div class="inner">
+            <div class="ft_btn">
+                <a onclick="movePage('24')" class="pl">
+                    <img src="./shared/images/btn_pl.png" alt="" />
+                </a>
+            </div>
+
+            <h2 class="ft_logo">
+                <img src="./shared/images/ft_logo.png" alt="" />
+            </h2>
+        </div>
+    </footer> -->
+</body>
