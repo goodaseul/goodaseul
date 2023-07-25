@@ -502,9 +502,10 @@
             <div class="question">
                 <p class="q_txt">38. 호준이의 아르바이트</p>
                 <script>
-                    document.write(`<p class='a_txt'> 답&nbsp; 주석 처리 </p><br>`);
+                    let print = +prompt("학생의 점수를 공백으로 구분하여 적어주세요.").split(" ");
+                    console.log(Number(Math.max(print)))
+                    document.write(`<p class='a_txt'> 답&nbsp;  </p><br>`);
                 </script>
-
 
             </div>
         </div>
