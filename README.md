@@ -11,8 +11,10 @@
 ![](https://github-readme-stats.vercel.app/api?username=goodaseul&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=goodaseul&theme=slateorange&hide_border=false)<br/>
 -->
+<!--
 ![github-readme-stats](https://github-readme-stats.vercel.app/api/top-langs/?username=goodaseul&layout=compact)
 [![](https://visitcount.itsvg.in/api?id=goodaseul&icon=0&color=0)](https://visitcount.itsvg.in)
+-->
 <a href="https://github.com/devxb/gitanimals" >
   <img
     src="https://render.gitanimals.org/lines/goodaseul"
@@ -48,6 +50,7 @@
   <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
 </div>
 
+<!--
 ## 🌐 E-mail:
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jds6408@naver.com) 
-
+-->
