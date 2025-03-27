@@ -2,11 +2,12 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=pretendard&weight=800&size=36&letterSpacing=20&pause=1000&color=FFFFFF&background=FFD02F&center=true&vCenter=true&width=1020&height=80&lines=Hello+I'm+daseul)](https://git.io/typing-svg)
 
-## 💡 About   
-- 🚀 **Frontend Developer | Next.js & React Enthusiast**  
-- 🎯 목표: 2025년 하반기까지 Next.js 기반 프론트엔드 개발자로 성장
-
-  <br/>
+<div>
+   <a href="https://github.com/devxb/gitanimals">
+      <img src="https://render.gitanimals.org/lines/goodaseul" width="600" height="120"/>
+    </a>
+</div>
+   
 <!--
 ![](https://github-readme-stats.vercel.app/api?username=goodaseul&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=goodaseul&theme=slateorange&hide_border=false)<br/>
@@ -15,14 +16,6 @@
 ![github-readme-stats](https://github-readme-stats.vercel.app/api/top-langs/?username=goodaseul&layout=compact)
 [![](https://visitcount.itsvg.in/api?id=goodaseul&icon=0&color=0)](https://visitcount.itsvg.in)
 -->
-<a href="https://github.com/devxb/gitanimals" >
-  <img
-    src="https://render.gitanimals.org/lines/goodaseul"
-    width="600"
-    height="120"
-  />
-</a>
-
 
 ## 🚀 Currently Learning :
 <div align="">
