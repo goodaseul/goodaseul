@@ -10,13 +10,15 @@
 </div>
 -->
 
-<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=goodaseul&utm_content=farm">
-<img
-  src="https://render.gitanimals.org/farms/goodaseul"
-  width="600"
-  height="300"
-/>
+
+<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=goodaseul&utm_content=line">
+  <img
+    src="https://render.gitanimals.org/lines/goodaseul?pet-id=692966395404495935"
+    width="1000"
+    height="120"
+  />
 </a>
+
    
 <!--
 ![](https://github-readme-stats.vercel.app/api?username=goodaseul&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
