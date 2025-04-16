@@ -2,11 +2,21 @@
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=pretendard&weight=800&size=36&letterSpacing=20&pause=1000&color=FFFFFF&background=FFD02F&center=true&vCenter=true&width=1020&height=80&lines=Hello+I'm+daseul)](https://git.io/typing-svg)
 
+<!--
 <div>
    <a href="https://github.com/devxb/gitanimals">
       <img src="https://render.gitanimals.org/lines/goodaseul" width="600" height="120"/>
     </a>
 </div>
+-->
+
+<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=goodaseul&utm_content=farm">
+<img
+  src="https://render.gitanimals.org/farms/goodaseul"
+  width="600"
+  height="300"
+/>
+</a>
    
 <!--
 ![](https://github-readme-stats.vercel.app/api?username=goodaseul&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
