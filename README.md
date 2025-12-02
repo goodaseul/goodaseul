@@ -1,7 +1,8 @@
 #  <img src="https://github.com/user-attachments/assets/fd9dfa54-51c5-4611-8604-aaed2f888713" width="32" height="32" style="vertical-align: middle; margin-right: 8px;"> Daseul 
 
+<!--
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=pretendard&weight=800&size=36&letterSpacing=20&pause=1000&color=FFFFFF&background=FFD02F&center=true&vCenter=true&width=1020&height=80&lines=Hello+I'm+daseul)](https://git.io/typing-svg)
-
+-->
 
 <div>
 <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=goodaseul&utm_content=line">
@@ -13,25 +14,8 @@
 </a>
 </div>
 
-<!--
-<a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=goodaseul&utm_content=farm">
-<img
-  src="https://render.gitanimals.org/farms/goodaseul"
-  width="1000"
-  height="300"
-/>
-</a>
--->
-   
-<!--
-![](https://github-readme-stats.vercel.app/api?username=goodaseul&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=goodaseul&theme=slateorange&hide_border=false)<br/>
--->
-<!--
-![github-readme-stats](https://github-readme-stats.vercel.app/api/top-langs/?username=goodaseul&layout=compact)
-[![](https://visitcount.itsvg.in/api?id=goodaseul&icon=0&color=0)](https://visitcount.itsvg.in)
--->
 
+<!--
 ##  Currently Learning :
 <div align="">
   <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
@@ -58,7 +42,6 @@
    <img src="https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white">
 </div>
 
-<!--
 ## 🌐 E-mail:
 [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jds6408@naver.com) 
 -->
