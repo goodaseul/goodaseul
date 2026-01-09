@@ -7,11 +7,11 @@
 <div>
 <a href="https://www.gitanimals.org/en_US?utm_medium=image&utm_source=goodaseul&utm_content=line">
   <img
-    src="https://render.gitanimals.org/lines/goodaseul?pet-id=692966395404495935"
-    width="1000"
+    src="https://render.gitanimals.org/lines/goodaseul?pet-id=789754906408995012"
+    width="600"
     height="120"
   />
-</a>
+</a> 
 </div>
 
 
