@@ -1,4 +1,7 @@
-# <img src="https://github.com/user-attachments/assets/fd9dfa54-51c5-4611-8604-aaed2f888713" width="32" height="32" style="vertical-align: middle; margin-right: 8px;"> Daseul
+# <img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/c375aba1-dcba-48ba-9cac-7817f3b6dda2" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/83ff1f69-3b2e-4554-8cbb-ea10fcc2f0dd" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/83ff1f69-3b2e-4554-8cbb-ea10fcc2f0dd" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/9f02530e-f044-4744-9c57-438dff8a8e33" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/5acc1ffc-c4ce-4f98-8b9d-399b19da3dac" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/ddd6de23-1cbc-4692-b37d-4a5b4a05a0e5" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/2447c5bd-041f-421d-aafa-77a7cbbd8fd4" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/32006496-fe90-42ab-9030-a5a615cb37d4" /><img width="32" height="32" alt="favicon-32x32" src="https://github.com/user-attachments/assets/b585c315-34e8-4016-b3bd-e4e2e123872b" />
+
+
+
 
 <small>Frontend Developer</small>
 
