@@ -1,6 +1,10 @@
-<img width="120" height="106" alt="결연한맹구" src="https://github.com/user-attachments/assets/7a0b4084-a2f6-4e26-868f-370be51c5160" />
-<p>Hi, there. <br/> I'm currently working as a front-end developer.</p>
-
+<p>
+  <img align="center" width="120" height="106" alt="결연한맹구" src="https://github.com/user-attachments/assets/7a0b4084-a2f6-4e26-868f-370be51c5160" />
+  &nbsp;&nbsp;
+  <span style="display: inline-block; vertical-align: middle; text-align: left;">
+    Hi, there.  I'm currently working as a front-end developer.
+  </span>
+</p>
 
 <br/>
 
