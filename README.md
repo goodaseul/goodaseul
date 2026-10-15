@@ -1,6 +1,5 @@
 <p>
-  <img width="120" height="106" alt="image" src="https://github.com/user-attachments/assets/1c8ecfbe-0d29-42a7-9e59-c7fe1c9896de" />
-
+  <img width="120" height="106" alt="image" src="https://github.com/user-attachments/assets/815cdabd-48be-411f-9edb-53c41dc97d73" />
   <span style="display: inline-block; vertical-align: middle; text-align: left;">
     Hi, there.  I'm currently working as a front-end developer.
   </span>
